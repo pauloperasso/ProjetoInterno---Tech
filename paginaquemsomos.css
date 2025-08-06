@@ -1,0 +1,673 @@
+/* HERO */
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Satoshi", sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  background-color: white;
+  padding: 10px 40px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1300px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Logo */
+.logo {
+  height: 90px;
+}
+
+/* Links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-family: "Satoshi", sans-serif;
+  font-size: 16px;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #0a1472; /* hover azul escuro */
+}
+
+.nav-links a.active {
+  color: #0e1d60; /* mega escuro */
+  font-weight: bold;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown > a > i {
+  margin-left: 6px;
+  font-size: 0.75rem;
+  vertical-align: middle;
+  color: #0e1d60;
+}
+
+.dropdown-content a i {
+  margin-right: 8px;
+  color: #0e1d60;
+}
+
+.dropdown-content {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  position: absolute;
+  background-color: white;
+  top: 100%;
+  left: 0;
+  min-width: 220px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 2000;
+  padding: 10px 0;
+}
+
+.dropdown-content li {
+  list-style: none;
+}
+
+.dropdown-content a {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  font-family: "Satoshi", sans-serif;
+  color: black;
+  text-decoration: none;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.dropdown-content a:hover {
+  background-color: #f0f0f0;
+  color: #0a1472;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Ícone da setinha */
+.dropdown i {
+  margin-left: 6px;
+  font-size: 12px;
+  color: #0a1472;
+}
+
+/* Espaçamento das setas nos dropdowns */
+.dropdown-content a i {
+  margin-right: 8px;
+  color: #0a1472;
+}
+
+/* Setinha ao lado de "Serviços" mais próxima */
+.dropdown > a > i {
+  margin-left: 6px;
+  font-size: 0.75rem;
+  vertical-align: middle;
+}
+
+.cta-button {
+  background-color: #0e1d60;
+  color: white;
+  border: 2px solid #0e1d60;
+  padding: 10px 18px;
+  text-decoration: none;
+  font-family: "Satoshi", sans-serif;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #0a1472;
+  color: white;
+  border-color: #0a1472;
+}
+.hero {
+  position: relative;
+  height: 80vh;
+  background: linear-gradient(to right, #0e1d60cc, #004aadcc),
+    url("hero-equipe-fundo.png") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+.hero-content h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #ffffff;
+  margin: 0;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  color: #333;
+}
+.quem-somos {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 50px;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+começo * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Satoshi", sans-serif;
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  background-image: url("sua-imagem.png"); /* substitua por seu caminho */
+  background-size: cover;
+  background-position: center;
+}
+
+.banner .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(30, 58, 138, 0.85); /* azul escuro com opacidade */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+}
+
+.banner h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+.banner h1 {
+  font-size: 32px;
+  font-weight: 700;
+}
+fim banner body {
+  font-family: "Satoshi", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  color: #2c2c2c;
+}
+
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 20px;
+  gap: 40px;
+}
+
+.about-text {
+  flex: 1 1 500px;
+  text-align: justify;
+}
+
+.about-text h4 {
+  color: #1e3a8a; /* azul da paleta da Mauá Jr */
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.about-text h1 {
+  font-size: 36px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.about-image {
+  flex: 1 1 400px;
+  display: flex;
+  justify-content: center;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+fim texto com foot body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.carousel-container {
+  width: 100%;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-slides {
+  display: flex;
+  width: 300%;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel {
+  width: 100%;
+  flex-shrink: 0;
+  height: 100%;
+}
+
+.carousel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+/* Navegação manual */
+.carousel-nav {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  padding: 0 20px;
+  z-index: 2;
+}
+
+.nav-button {
+  font-size: 2rem;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  user-select: none;
+}
+
+/* Transições de slides via radio buttons */
+#slide1:checked ~ .carousel-slides {
+  transform: translateX(0%);
+}
+#slide2:checked ~ .carousel-slides {
+  transform: translateX(-100%);
+}
+#slide3:checked ~ .carousel-slides {
+  transform: translateX(-200%);
+}
+fim carrosel body {
+  margin: 0;
+  padding: 0;
+  font-family: "Satoshi", sans-serif;
+  background-color: #fff;
+}
+
+.conquistas {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: linear-gradient(to right, #0c1b46, #0070f3);
+  color: white;
+  height: 300px;
+  padding: 0 40px;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.item {
+  flex: 1 1 200px;
+  margin: 10px;
+}
+
+.destaque h2 {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.numero {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.barra {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.descricao {
+  font-size: 16px;
+  opacity: 0.85;
+  margin: 0;
+}
+fim nossas nossos goals body {
+  margin: 0;
+  padding: 0;
+  font-family: "Satoshi", sans-serif;
+  background-color: #fff;
+  color: #2c2c2c;
+}
+
+.vantagens {
+  text-align: center;
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-subtitle {
+  color: #1e3a8a;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.section-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.card {
+  flex: 1 1 250px;
+  max-width: 300px;
+}
+
+.card .icon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 20px;
+}
+
+.card h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.card p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+}
+fim vantagens maua jr body {
+  margin: 0;
+  padding: 0;
+  font-family: "Satoshi", sans-serif;
+  background-color: #fff;
+  color: #2c2c2c;
+}
+
+.mej-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start; /* alinha topo */
+  justify-content: space-between;
+  padding: 80px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;
+}
+
+.mej-left {
+  flex: 1 1 400px;
+}
+
+.mej-right {
+  flex: 1 1 600px;
+}
+
+.mej-subtitle {
+  color: #1e3a8a;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.mej-title {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.mej-description {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #555;
+  text-align: justify;
+}
+
+fim .texto {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+  text-align: left; /* <-- garante alinhamento à esquerda */
+}
+
+.texto h4 {
+  color: #0066ff;
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.texto h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.texto p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #666;
+  text-align: left;
+}
+
+.imagem {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+  text-align: center;
+}
+
+.imagem img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.footer {
+  background: linear-gradient(to top, #030e46, #0a1472);
+  color: white;
+  font-family: "Satoshi", sans-serif;
+  padding: 40px 20px 20px 20px;
+}
+
+.footer-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  justify-content: space-between;
+}
+
+.footer-column {
+  flex: 1 1 200px;
+  min-width: 220px;
+}
+
+.footer-logo {
+  width: 220px;
+  margin-bottom: 16px;
+}
+
+.footer-description {
+  font-size: 14px;
+  margin-bottom: 20px;
+  line-height: 1.6;
+  color: #e0e0e0;
+}
+
+.footer-column h4 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  border-left: 2px solid white;
+  padding-left: 8px;
+}
+
+.footer-column ul {
+  list-style: none;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+  color: #e0e0e0;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.footer-column ul li a i {
+  margin-right: 7px;
+  color: white;
+}
+
+.footer-column ul li a:hover {
+  color: #004aad;
+}
+
+.contact-info li {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.social-icons a {
+  margin-right: 12px;
+  font-size: 18px;
+  color: white;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #004aad;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: 30px;
+  padding-top: 20px;
+  text-align: center;
+  font-size: 13px;
+  color: #d0d0d0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: white;
+  border-radius: 50%;
+  padding: 14px;
+  font-size: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+  transition: background-color 0.3s;
+}
+
+.whatsapp-button:hover {
+  background-color: #1eb84c;
+}
