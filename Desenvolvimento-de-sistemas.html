@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!-- 
+  COMENTÁRIO: Declaração do documento HTML5 em português brasileiro
+-->
+
+<head>
+  <!-- COMENTÁRIO: Seção de metadados - informações técnicas da página -->
+  <meta charset="UTF-8">
+  <!-- COMENTÁRIO: Define a codificação de caracteres para suportar acentos e caracteres especiais -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- COMENTÁRIO: Configura a viewport para responsividade em dispositivos móveis -->
+  <title>Desenvolvimento de Sistemas - Mauá Júnior</title>
+  <!-- COMENTÁRIO: Título que aparece na aba do navegador -->
+
+  <link rel="stylesheet" href="Desenvolvimento-de-sistemas.css">
+  <!-- COMENTÁRIO: Link para o arquivo CSS específico desta página -->
+  <link rel="icon" type="image/png" href="./images/Logo Vertical.png">
+  <!-- COMENTÁRIO: Favicon da página -->
+
+  <!-- COMENTÁRIO: Importação de fontes do Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- COMENTÁRIO: Biblioteca de ícones Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+  <!-- COMENTÁRIO: Corpo da página - todo conteúdo visível fica aqui -->
+
+  <!-- COMENTÁRIO: Barra de navegação principal - mesma estrutura da página anterior -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <!-- COMENTÁRIO: Logo que redireciona para a página inicial -->
+      <a href="PáginaInicial.html">
+        <img src="./images/Logo Horizontal com Slogam.png" alt="Logo Mauá Júnior" class="logo">
+      </a>
+
+      <!-- COMENTÁRIO: Menu de navegação com links -->
+      <ul class="nav-links">
+        <li><a href="PáginaInicial.html">Home</a></li>
+        <li><a href="#">Quem Somos</a></li>
+
+        <!-- COMENTÁRIO: Dropdown de serviços - item ativo nesta página -->
+        <li class="dropdown">
+          <a href="#" class="active">Serviços <i class="fas fa-angle-down"></i></a>
+          <!-- COMENTÁRIO: class="active" indica que esta é a página atual -->
+          <ul class="dropdown-content">
+            <li><a href="#"><i class="fas fa-angle-right"></i> Tecnologia</a></li>
+            <li><a href="#"><i class="fas fa-angle-right"></i> Administração</a></li>
+            <li><a href="#"><i class="fas fa-angle-right"></i> Design</a></li>
+            <li><a href="#"><i class="fas fa-angle-right"></i> Engenharia de Produção</a></li>
+            <li><a href="#"><i class="fas fa-angle-right"></i> Engenharia Química/Alimentos</a></li>
+          </ul>
+        </li>
+
+        <li><a href="#">Contato</a></li>
+      </ul>
+
+      <!-- COMENTÁRIO: Botão de Call-to-Action (CTA) -->
+      <a href="#" class="cta-button">Entre em contato conosco</a>
+    </div>
+  </nav>
+
+  <!-- COMENTÁRIO: Seção Hero - banner principal da página -->
+  <section class="hero-sites">
+    <div class="hero-content">
+      <!-- COMENTÁRIO: Subtítulo do hero -->
+      <h4>Desenvolvimento de Sistemas</h4>
+      <!-- COMENTÁRIO: Título principal da página -->
+      <h1>A ponte entre desafios e soluções digitais</h1>
+      <!-- COMENTÁRIO: Descrição do serviço -->
+      <p>Transforme desafios em eficiência com sistemas desenvolvidos sob medida para o seu negócio. Automatize
+        processos, reduza erros e conquiste mais produtividade com tecnologia feita para evoluir junto com você.</p>
+      <!-- COMENTÁRIO: Botão de ação principal -->
+      <a href="#contato" class="btn">Entre em contato conosco</a>
+    </div>
+  </section>
+
+  <!-- COMENTÁRIO: Seção explicativa "O que é" -->
+  <section class="oque-section">
+    <div class="oque-text">
+      <!-- COMENTÁRIO: Subtítulo da seção -->
+      <span class="section-subtitle">O que é</span>
+      <!-- COMENTÁRIO: Título da seção -->
+      <h2>O que é o Desenvolvimento de Sistemas?</h2>
+      <!-- COMENTÁRIO: Texto explicativo sobre o serviço -->
+      <p>O desenvolvimento de sistemas consiste na criação de soluções digitais personalizadas que automatizam
+        processos, otimizam rotinas e conectam diferentes áreas de uma empresa.
+        Mais do que apenas programar, envolve entender a fundo as necessidades do negócio para construir ferramentas
+        inteligentes, seguras e escaláveis — capazes de aumentar a produtividade, reduzir custos operacionais e
+        proporcionar uma gestão mais eficiente e integrada.
+      </p>
+    </div>
+    <div class="oque-img">
+      <!-- COMENTÁRIO: Imagem ilustrativa do serviço -->
+      <img src="./Images/pexels-luis-gomes-166706-546819.jpg" alt="Desenvolvimento de Sistemas">
+    </div>
+  </section>
+
+  <!-- COMENTÁRIO: Seção de benefícios do serviço -->
+  <section class="beneficios">
+    <span class="section-subtitle">Benefícios</span>
+    <h2>O Desenvolvimento de Sistemas é para você que busca:</h2>
+
+    <!-- COMENTÁRIO: Grid com os benefícios em formato de cards -->
+    <div class="beneficios-grid">
+      <!-- COMENTÁRIO: Card individual de benefício -->
+      <div class="beneficio">
+        <i class="fas fa-lock"></i>
+        <h3>Segurança e Confiabilidade</h3>
+        <p>Garanta que seus dados e os de seus clientes estejam protegidos com sistemas seguros e estruturados.</p>
+      </div>
+
+      <div class="beneficio">
+        <i class="fas fa-users"></i>
+        <h3>Integração Total</h3>
+        <p>Conecte diferentes setores e ferramentas da sua empresa em um único sistema, melhorando a comunicação
+          interna.</p>
+      </div>
+
+      <div class="beneficio">
+        <i class="fas fa-rocket"></i>
+        <h3>Eficiência Operacional</h3>
+        <p>Automatize tarefas repetitivas e reduza erros manuais, tornando seus processos mais ágeis e precisos.</p>
+      </div>
+
+      <div class="beneficio">
+        <i class="fas fa-chart-line"></i>
+        <h3>Tomada de Decisão Inteligente</h3>
+        <p>Tenha acesso a dados e relatórios em tempo real que auxiliam na gestão e impulsionam resultados estratégicos.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMENTÁRIO: Seção do processo de desenvolvimento -->
+<section class="processo">
+  <div class="processo-header">
+    <span class="section-subtitle">NOSSO PROCESSO</span>
+    <h2>Como o serviço será executado?</h2>
+  </div>
+
+  <div class="processo-steps">
+
+    <div class="step">
+      <div class="step-number">
+        <span>Etapa</span>
+        <h3>01</h3>
+      </div>
+      <div class="step-content">
+        <h4>Levantamento de Requisitos</h4>
+        <p>Iniciamos com um alinhamento detalhado com o cliente para entender as necessidades do sistema, os processos que serão automatizados e os resultados esperados. Essa etapa garante que o projeto tenha objetivos claros e alcance o máximo de eficiência.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-number">
+        <span>Etapa</span>
+        <h3>02</h3>
+      </div>
+      <div class="step-content">
+        <h4>Arquitetura e Planejamento</h4>
+        <p>Definimos a estrutura técnica do sistema, as tecnologias a serem utilizadas e o fluxo de funcionamento. Aqui é criada toda a base lógica que sustentará o desempenho e a escalabilidade do projeto.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-number">
+        <span>Etapa</span>
+        <h3>03</h3>
+      </div>
+      <div class="step-content">
+        <h4>Design e Protótipo</h4>
+        <p>Desenvolvemos o layout e as interfaces do sistema, priorizando a usabilidade e a experiência do usuário. O cliente tem acesso a um protótipo navegável para validação antes da codificação final.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-number">
+        <span>Etapa</span>
+        <h3>04</h3>
+      </div>
+      <div class="step-content">
+        <h4>Desenvolvimento e Integrações</h4>
+        <p>Nesta fase, transformamos o planejamento em código. Implementamos todas as funcionalidades do sistema, realizamos as integrações necessárias e garantimos segurança, desempenho e responsividade.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-number">
+        <span>Etapa</span>
+        <h3>05</h3>
+      </div>
+      <div class="step-content">
+        <h4>Validação e Entrega</h4>
+        <p>Após os testes de desempenho e usabilidade, o sistema é homologado junto ao cliente e entregue pronto para uso. Incluímos um período de suporte pós-implantação para ajustes e acompanhamento inicial.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- COMENTÁRIO: Seção FAQ (Perguntas Frequentes) -->
+  <section class="faq-section">
+    <div class="faq-container">
+      <h4 class="faq-subtitle">FAQ</h4>
+      <h2 class="faq-title">Perguntas Frequentes</h2>
+
+      <!-- COMENTÁRIO: Item individual do FAQ -->
+      <div class="faq-item">
+        <button class="faq-question">
+          Qual a duração média do projeto?
+          <span class="faq-icon">+</span>
+          <!-- COMENTÁRIO: Ícone que provavelmente vira "-" quando é expandido -->
+        </button>
+        <div class="faq-answer">
+          <!-- COMENTÁRIO: Resposta que aparece ao clicar na pergunta -->
+          <p>Nossos projetos são completamente personalizados e pensados para cada cliente, portanto sua duração pode
+            variar de acordo com a complexidade e objetivo do projeto.</p>
+          <p>Em média, esse serviço dura por volta de um mês e meio.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Como acontece o contato com o cliente?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Mantemos uma frequente troca de mensagens e emails, além de reuniões de alinhamento. É nosso dever como
+            empresa fornecer informações e coletar feedbacks para termos um resultado satisfatório no final do projeto.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          O serviço prestado é de qualidade?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Possuímos membros capacitados e dispostos, a infraestrutura do Instituto Mauá de Tecnologia e também a
+            orientação de diversos professores.</p>
+          <p>A satisfação de nossos clientes é coletada através de parâmetros mundialmente conhecidos, o NPS e o CSAT, e
+            em ambos possuímos 100%, uma vez que buscamos sempre entregar o melhor ao nosso cliente.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Como posso ter certeza que esse é o serviço certo para minha empresa?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Agende uma conversa conosco, de maneira gratuita! Realizamos o diagnóstico de sua empresa, passando por
+            todos os pontos principais para entender melhor o serviço para ela e como ele pode te ajudar.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMENTÁRIO: Seção final de Call-to-Action -->
+  <section class="cta-final">
+    <div class="cta-container">
+      <div class="cta-texto">
+        <span class="cta-sub">NÃO ENCONTROU O QUE PRECISAVA?</span>
+        <h2>Não é esse o serviço que sua empresa procura?<br> Consulte na página de serviços!</h2>
+        <!-- COMENTÁRIO: <br> quebra a linha no meio do título -->
+        <a href="#servicos" class="cta-btn">Ver todos os serviços</a>
+      </div>
+      <div class="cta-img">
+        <img src="https://mauajr.com.br/wp-content/uploads/2022/10/atendimento.png" alt="Atendimento">
+      </div>
+    </div>
+  </section>
+
+  <!-- COMENTÁRIO: Rodapé da página (igual ao da página anterior) -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-column">
+        <img src="./images/Logo Horizontal Branco com Slogam.png" alt="Logo Mauá Júnior" class="footer-logo">
+        <p class="footer-description">
+          A Mauá Júnior é uma entidade sem fins lucrativos, voltada para o desenvolvimento profissional de alunos do
+          Instituto Mauá de Tecnologia através da realização de projetos personalizados para clientes.
+        </p>
+        <div class="social-icons">
+          <a href="https://www.instagram.com/mauajr/" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://api.whatsapp.com/send?phone=5511948199383&text=Ol%C3%A1!%20Estou%20entrando%20em%20contato%20diretamente%20pelo%20link%20do%20site%20e%20gostaria%20de%20solu%C3%A7%C3%B5es%20na%20%C3%A1rea%20de%20[especifique%20a%20%C3%A1rea%20de%20interesse]."
+            target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://www.linkedin.com/company/mauajr/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h4>Páginas</h4>
+        <ul>
+          <li><a href="#"><i class="fas fa-chevron-right"></i> Home</a></li>
+          <li><a href="#"><i class="fas fa-chevron-right"></i> Quem somos</a></li>
+          <li><a href="#"><i class="fas fa-chevron-right"></i> Serviços</a></li>
+          <li><a href="#"><i class="fas fa-chevron-right"></i> Contato</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Serviços</h4>
+        <ul>
+          <li><a href="#"><i class="fas fa-chevron-right"></i> Tecnologia</a></li>
+          <li><a href="#"><i class="fas fa-chevron-right"></i> Administração</a></li>
+          <li><a href="#"><i class="fas fa-chevron-right"></i> Design</a></li>
+          <li><a href="#"><i class="fas fa-chevron-right"></i> Engenharia de produção</a></li>
+          <li><a href="#"><i class="fas fa-chevron-right"></i> Engenharia Química/Alimentos</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Contatos</h4>
+        <ul class="contact-info">
+          <li><i class="fas fa-phone"></i>+55 11 94819-9383</li>
+          <li><i class="fas fa-envelope"></i> contato@mauajr.com</li>
+          <li><i class="fas fa-map-marker-alt"></i> Praça Mauá, 1 - Mauá, São Caetano do Sul - SP, 09580-900</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>Mauá Jr | Todos os direitos reservados.</p>
+      <p>CNPJ: 62.571.401/0001-59</p>
+      <p>Desenvolvido por Mauá Júnior</p>
+    </div>
+
+    <!-- COMENTÁRIO: Botão flutuante do WhatsApp -->
+    <a href="https://api.whatsapp.com/send?phone=5511948199383&text=Ol%C3%A1!%20Estou%20entrando%20em%20contato%20diretamente%20pelo%20link%20do%20site%20e%20gostaria%20de%20solu%C3%A7%C3%B5es%20na%20%C3%A1rea%20de%20[especifique%20a%20%C3%A1rea%20de%20interesse]."
+      target="_blank" rel="noopener noreferrer" class="whatsapp-button">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+  </footer>
+
+  <!-- COMENTÁRIO: Link para arquivo JavaScript específico desta página -->
+  <script src="ScriptFaq.js"></script>
+</body>
+
+</html>
