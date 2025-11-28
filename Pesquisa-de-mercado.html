@@ -21,6 +21,11 @@
       <a href="PáginaInicial.html">
         <img src="./images/Logo Horizontal com Slogam.png" alt="Logo Mauá Júnior" class="logo">
       </a>
+
+      <button class="hamburger" id="hamburger">
+        <i class="fas fa-bars"></i>
+      </button>
+
       <ul class="nav-links">
         <li><a href="PáginaInicial.html">Home</a></li>
         <li><a href="#">Quem Somos</a></li>
@@ -36,6 +41,7 @@
         </li>
         <li><a href="#">Contato</a></li>
       </ul>
+
       <a href="#" class="cta-button">Entre em contato conosco</a>
     </div>
   </nav>
@@ -44,7 +50,8 @@
     <div class="hero-content">
       <h4>Pesquisa de Mercado</h4>
       <h1>Transforme dados em estratégia e conquiste o mercado!</h1>
-      <p>Identifique oportunidades, públicos e riscos atuais de determinados mercados por meio de uma análise minuciosa.</p>
+      <p>Identifique oportunidades, públicos e riscos atuais de determinados mercados por meio de uma análise minuciosa.
+      </p>
       <a href="#contato" class="btn">Entre em contato conosco</a>
     </div>
   </section>
@@ -54,7 +61,9 @@
     <div class="oque-text">
       <span class="section-subtitle">O que é</span>
       <h2>O que é a Pesquisa de Mercado?</h2>
-      <p>A Pesquisa de Mercado caracteriza uma análise feita por meio da coleta de dados obtidos a partir de questionários e formulários, onde o objetivo é proporcionar maior conhecimento a cerca do ramo do mercado estudado, seja no que compete a setores desse nicho e até os concorrentes potenciais.</p>
+      <p>A Pesquisa de Mercado caracteriza uma análise feita por meio da coleta de dados obtidos a partir de
+        questionários e formulários, onde o objetivo é proporcionar maior conhecimento a cerca do ramo do mercado
+        estudado, seja no que compete a setores desse nicho e até os concorrentes potenciais.</p>
     </div>
     <div class="oque-img">
       <img src="./images/pexels-fauxels-3183170.jpg" alt="Pesquisa de mercado">
@@ -75,17 +84,20 @@
       <div class="beneficio">
         <i class="fas fa-eye"></i>
         <h3>Perspectiva Analítica</h3>
-        <p>Seja capaz de analisar e distinguir possíveis oportunidades e obstáculos de crescimento dentro do mercado em que se atua, maximizando os lucros e ganhando reconhecimento.</p>
+        <p>Seja capaz de analisar e distinguir possíveis oportunidades e obstáculos de crescimento dentro do mercado em
+          que se atua, maximizando os lucros e ganhando reconhecimento.</p>
       </div>
       <div class="beneficio">
         <i class="fas fa-chart-pie fa-sm"></i>
         <h3>Pensamento Estratégico</h3>
-        <p>Compreenda as melhores oportunidades de retorno e negócio para sua empresa, aliando planejamento futuro a análises de riscos.</p>
+        <p>Compreenda as melhores oportunidades de retorno e negócio para sua empresa, aliando planejamento futuro a
+          análises de riscos.</p>
       </div>
       <div class="beneficio">
         <i class="fas fa-file-invoice-dollar"></i>
         <h3>Análise de Concorrência</h3>
-        <p>Entenda o posicionamento de demais empresas do ramo estudado, possibilitando explorar estratégias de posicionamento no mercado.</p>
+        <p>Entenda o posicionamento de demais empresas do ramo estudado, possibilitando explorar estratégias de
+          posicionamento no mercado.</p>
       </div>
     </div>
   </section>
@@ -107,7 +119,7 @@
         <div class="step-content">
           <h4>Reconhecimento</h4>
           <p>Nosso objetivo é definir o foco principal do projeto e as pretensões do(a) cliente.
-             Além disso, serão validadas as características da pesquisa e profundidade das informações.</p>
+            Além disso, serão validadas as características da pesquisa e profundidade das informações.</p>
         </div>
       </div>
 
@@ -119,19 +131,20 @@
         <div class="step-content">
           <h4>Planejamento</h4>
           <p>Nessa etapa ocorre a definição da metodologia
-             mais adequada ao propósito do projeto de forma a solucionar a questão do cliente de forma mais eficiente.</p>
+            mais adequada ao propósito do projeto de forma a solucionar a questão do cliente de forma mais eficiente.
+          </p>
         </div>
       </div>
 
-    <div class="step">
-      <div class="step-number">
-       <span>Etapa</span>
-        <h3>03</h3>
+      <div class="step">
+        <div class="step-number">
+          <span>Etapa</span>
+          <h3>03</h3>
         </div>
         <div class="step-content">
           <h4>Formulação</h4>
           <p>Criação de formulários de pesquisa para obter mais dados precisos e úteis
-             sobre o público e o mercado.</p>
+            sobre o público e o mercado.</p>
         </div>
       </div>
 
@@ -143,7 +156,7 @@
         <div class="step-content">
           <h4>Execução</h4>
           <p>Aqui, iniciamos a pesquisa efetivamente em busca de entender melhor o público alvo do cliente,
-             a concorrência, a possível recepção de novos produto, entre outros.</p>
+            a concorrência, a possível recepção de novos produto, entre outros.</p>
         </div>
       </div>
 
@@ -154,7 +167,8 @@
         </div>
         <div class="step-content">
           <h4>Entrega</h4>
-          <p>Na última etapa ocorre o processamento, análise e apresentação dos dados adquiridos a partir das pesquisas.</p>
+          <p>Na última etapa ocorre o processamento, análise e apresentação dos dados adquiridos a partir das pesquisas.
+          </p>
         </div>
       </div>
 
@@ -300,6 +314,16 @@
     </a>
   </footer>
   <script src="desenvolvimento-de-site.js"></script>
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navbarContainer = document.querySelector('.navbar-container');
+
+    if (hamburger && navbarContainer) {
+      hamburger.addEventListener('click', () => {
+        navbarContainer.classList.toggle('active');
+      });
+    }
+  </script>
 </body>
 
 </html>

@@ -60,6 +60,21 @@ body {
     font-weight: bold;
 }
 
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.hamburger {
+    background: none;
+    border: none;
+    font-size: 26px;
+    color: var(--ink);
+    cursor: pointer;
+    display: none;
+}
+
 .dropdown {
     position: relative;
 }
@@ -154,10 +169,9 @@ body {
     border-color: #003fcc;
 }
 
-
 .hero-servicos {
     background: linear-gradient(rgba(14, 29, 96, 0.85), rgba(14, 29, 96, 0.85)),
-        url('./images/pexels-tima-miroshnichenko-5439434.jpg') center/cover no-repeat;
+        url('') center/cover no-repeat;
     color: white;
     text-align: center;
     padding: 120px 20px;
@@ -174,7 +188,6 @@ body {
     font-size: 18px;
     opacity: 0.95;
 }
-
 
 .fade-in {
     opacity: 0;
@@ -193,7 +206,6 @@ body {
     }
 }
 
-
 .servicos-tecnologia {
     padding: 80px 40px;
     max-width: 1200px;
@@ -208,31 +220,27 @@ body {
     color: #0e1d60;
 }
 
-
 .cards-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    max-width: 1200px;
+    margin: 0 auto;
     gap: 40px;
-    justify-items: center;
-}
-
-.cards-container .card:nth-child(4) {
-    grid-column: 2 / span 1;
-
-}
-
-.cards-container .card:nth-child(5) {
-    grid-column: 3 / span 1;
-
 }
 
 .card {
+    flex: 1 1 300px;
     background: #fff;
     padding: 30px 20px;
     border-radius: 10px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
     max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .card:hover {
@@ -277,7 +285,6 @@ body {
     background-color: #003fcc;
     border-color: #003fcc;
 }
-
 
 .vantagens {
     background-color: #fff;
@@ -450,4 +457,133 @@ body {
 
 .whatsapp-button:hover {
     background-color: #1eb84c;
+}
+
+@media (max-width: 992px) {
+    .oque-section {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .beneficios-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .cta-container {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .cta-texto {
+        text-align: left;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* 1. Ajuste do Container da Navbar */
+    .navbar {
+        padding: 15px 20px;
+        /* Um pouco mais de espaço */
+    }
+
+    .navbar-container {
+        /* Permite que os itens "quebrem" linha quando o menu abrir */
+        flex-wrap: wrap;
+    }
+
+    /* 2. Botão Hambúrguer */
+    .hamburger {
+        display: block;
+        z-index: 2000;
+        /* Garante que o ícone fique alinhado à direita */
+        margin-left: auto;
+    }
+
+    /* Quando o menu está aberto, muda a cor do ícone se necessário */
+    .navbar-container.active .hamburger i {
+        color: #0e1d60;
+    }
+
+    /* 3. Esconder os itens por padrão no Mobile */
+    .nav-links,
+    .cta-button {
+        display: none;
+        /* Escondido inicialmemente */
+        width: 100%;
+        /* Ocupa a largura toda quando aparecer */
+        text-align: center;
+    }
+
+    /* 4. Estado ATIVO (Quando clica no hambúrguer) */
+
+    /* Mostra a lista de links */
+    .navbar-container.active .nav-links {
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        padding-top: 20px;
+        animation: slideDown 0.3s ease forwards;
+        border-top: 1px solid #eee;
+        margin-top: 15px;
+        /* Espaço abaixo do logo */
+    }
+
+    .navbar-container.active .nav-links li {
+        margin: 15px 0;
+    }
+
+    /* Mostra o botão CTA */
+    .navbar-container.active .cta-button {
+        display: block;
+        /* Ou inline-block */
+        margin: 20px auto 20px auto;
+        /* Centraliza e dá espaço */
+        width: 80%;
+        /* Largura do botão no mobile */
+    }
+
+    /* 5. Ajustes do Dropdown no Mobile */
+    .dropdown-content {
+        position: static;
+        /* Remove a flutuação */
+        box-shadow: none;
+        display: none;
+        background-color: #f8f9fa;
+        /* Fundo levemente diferente */
+        transform: none;
+        opacity: 1;
+        visibility: visible;
+        padding: 0;
+    }
+
+    /* Dropdown abre ao passar o mouse ou clicar no pai */
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .dropdown-content a {
+        padding-left: 30px;
+        /* Indentação para hierarquia visual */
+    }
+
+    /* Ajuste extra para a logo não ficar gigante se houver */
+    .logo {
+        height: 60px;
+        /* Reduz um pouco no mobile se necessário */
+    }
+}
+
+/* Animação suave de descida */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

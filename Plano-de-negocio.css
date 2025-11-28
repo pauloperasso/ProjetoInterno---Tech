@@ -58,6 +58,21 @@ body {
   font-weight: bold;
 }
 
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.hamburger {
+    background: none;
+    border: none;
+    font-size: 26px;
+    color: var(--ink);
+    cursor: pointer;
+    display: none;
+}
+
 .dropdown {
   position: relative;
 }
@@ -667,4 +682,171 @@ section p {
 
 .whatsapp-button:hover {
   background-color: #1eb84c;
+}
+
+@media (max-width: 992px) {
+    /* Ajustes para Tablets */
+    .oque-section {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .beneficios-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas em tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    
+    /* --- NAVBAR E MENU HAMBÚRGUER --- */
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .navbar-container {
+        flex-wrap: wrap; /* Permite que o menu "caia" para a linha de baixo */
+    }
+
+    .hamburger {
+        display: block; /* Mostra o botão */
+        font-size: 24px;
+        color: #0e1d60;
+        background: none;
+        border: none;
+        cursor: pointer;
+        z-index: 2000;
+        margin-left: auto; /* Empurra o botão para a direita */
+    }
+
+    /* Esconde os itens do menu inicialmente */
+    .nav-links, 
+    .navbar-container > .cta-button {
+        display: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* ESTADO ATIVO (Quando clicado) */
+    .navbar-container.active .nav-links {
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        padding-top: 20px;
+        margin-top: 15px;
+        border-top: 1px solid #eee;
+        animation: slideDown 0.3s ease forwards;
+    }
+
+    .navbar-container.active .nav-links li {
+        margin: 15px 0;
+        width: 100%;
+    }
+
+    .navbar-container.active > .cta-button {
+        display: inline-block;
+        margin: 20px auto;
+        width: 80%;
+    }
+
+    /* Ajuste do Dropdown no Mobile */
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+        display: none;
+        background-color: #f9f9f9;
+        transform: none;
+        opacity: 1;
+        visibility: visible;
+        width: 100%;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    /* --- SEÇÕES DA PÁGINA --- */
+
+    /* Hero */
+    .hero-sites {
+        height: auto;
+        padding: 100px 20px;
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 28px;
+    }
+
+    /* O que é */
+    .oque-section {
+        padding: 50px 20px;
+    }
+
+    .oque-text h2 {
+        font-size: 24px;
+    }
+
+    /* Benefícios (Grid) */
+    .beneficios {
+        padding: 40px 20px;
+    }
+
+    .beneficios-grid {
+        grid-template-columns: 1fr; /* 1 coluna no celular */
+        gap: 30px;
+    }
+
+    /* Processo */
+    .processo-steps .step {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .step-number {
+        margin-bottom: 15px;
+    }
+
+    /* CTA Final */
+    .cta-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cta-texto {
+        max-width: 100%;
+    }
+
+    /* Footer */
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-column {
+        min-width: 100%;
+    }
+
+    .footer-column h4 {
+        border-left: none;
+        border-bottom: 2px solid white;
+        display: inline-block;
+        padding-bottom: 5px;
+        padding-left: 0;
+    }
+
+    .contact-info li {
+        justify-content: center;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+/* Animação suave para o menu */
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
 }

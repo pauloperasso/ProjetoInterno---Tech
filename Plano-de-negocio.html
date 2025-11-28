@@ -22,6 +22,11 @@
       <a href="PáginaInicial.html">
         <img src="./images/Logo Horizontal com Slogam.png" alt="Logo Mauá Júnior" class="logo">
       </a>
+
+      <button class="hamburger" id="hamburger">
+        <i class="fas fa-bars"></i>
+      </button>
+
       <ul class="nav-links">
         <li><a href="PáginaInicial.html">Home</a></li>
         <li><a href="#">Quem Somos</a></li>
@@ -37,6 +42,7 @@
         </li>
         <li><a href="#">Contato</a></li>
       </ul>
+
       <a href="#" class="cta-button">Entre em contato conosco</a>
     </div>
   </nav>
@@ -45,8 +51,9 @@
     <div class="hero-content">
       <h4>Plano de Negócios</h4>
       <h1>Estruture o processo de escala na sua empresa</h1>
-      <p>Tenha um plano que organiza o passo a passo que sua empresa deve fazer durante o crescimento. Isso irá diminuir as changes de fracasso
-      e aumentar as possibilidades de construir um negócio de sucesso.</p>
+      <p>Tenha um plano que organiza o passo a passo que sua empresa deve fazer durante o crescimento. Isso irá diminuir
+        as changes de fracasso
+        e aumentar as possibilidades de construir um negócio de sucesso.</p>
       <a href="#contato" class="btn">Entre em contato conosco</a>
     </div>
   </section>
@@ -56,8 +63,10 @@
     <div class="oque-text">
       <span class="section-subtitle">O que é</span>
       <h2>O que é o Plano de Negócios?</h2>
-      <p>O Plano de Negócios consiste em estruturar um plano de ação mapeando todos os objetivos da sua empresa e definindo qual será a rota para alcançar cada um deles.
-        Além disso, o plano irá auxiliar na construção de um posicionamento ideal dentro do mercado e também nas tomadas de decisões, para assim, garantir uma margem de erro menor quando comparada ao restante do mercado.</p>
+      <p>O Plano de Negócios consiste em estruturar um plano de ação mapeando todos os objetivos da sua empresa e
+        definindo qual será a rota para alcançar cada um deles.
+        Além disso, o plano irá auxiliar na construção de um posicionamento ideal dentro do mercado e também nas tomadas
+        de decisões, para assim, garantir uma margem de erro menor quando comparada ao restante do mercado.</p>
     </div>
     <div class="oque-img">
       <img src="./images/pexels-rdne-8123871.jpg" alt="Plano de negócios">
@@ -89,7 +98,7 @@
         <i class="fas fa-award"></i>
         <h3>Know-how de Mercado</h3>
         <p>Busca entender melhor sobre o mercado que está inserido e os concorrentes diretos.</p>
-        </div>
+      </div>
       <div class="beneficio">
         <i class="fas fa-eye"></i>
         <h3>Visão Estratégica</h3>
@@ -126,7 +135,7 @@
         <div class="step-content">
           <h4>Plano Financeiro:</h4>
           <p>Estudo realizado com o intuito de entender os custos necessários na hora de abrir e
-             manter um negócio vivo conforme a análise financeira realizada.</p>
+            manter um negócio vivo conforme a análise financeira realizada.</p>
         </div>
       </div>
 
@@ -137,8 +146,9 @@
         </div>
         <div class="step-content">
           <h4>Plano Operacional:</h4>
-          <p>Analisar como pode ser feito o armazenamento dos dados, seguido da formulação de um fluxograma para a otimização da empresa, e por fim,
-             desenvolver um plano de logística com custos e prazos definidos a longo prazo.</p>
+          <p>Analisar como pode ser feito o armazenamento dos dados, seguido da formulação de um fluxograma para a
+            otimização da empresa, e por fim,
+            desenvolver um plano de logística com custos e prazos definidos a longo prazo.</p>
         </div>
       </div>
 
@@ -284,6 +294,16 @@
     </a>
   </footer>
   <script src="geral.js"></script>
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navbarContainer = document.querySelector('.navbar-container');
+
+    if (hamburger && navbarContainer) {
+      hamburger.addEventListener('click', () => {
+        navbarContainer.classList.toggle('active');
+      });
+    }
+  </script>
 </body>
 
 </html>

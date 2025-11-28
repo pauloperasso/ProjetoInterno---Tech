@@ -23,6 +23,10 @@
         <img src="./images/Logo Horizontal com Slogam.png" alt="Logo Mauá Júnior" class="logo">
       </a>
 
+      <button class="hamburger" id="hamburger">
+        <i class="fas fa-bars"></i>
+      </button>
+
       <ul class="nav-links">
         <li><a href="PáginaInicial.html">Home</a></li>
         <li><a href="#">Quem Somos</a></li>
@@ -56,7 +60,8 @@
       <div class="card">
         <i class="fas fa-money-bill-wave"></i>
         <h3>Análise Financeira</h3>
-        <p>Estudo das finanças da empresa, promovendo saúde financeira, aumentando a rentabilidade e diminuindo dos custos.</p>
+        <p>Estudo das finanças da empresa, promovendo saúde financeira, aumentando a rentabilidade e diminuindo dos
+          custos.</p>
         <br>
         <a href="analise-financeira-6.html" class="cta-button">Conheça mais sobre nosso serviço</a>
       </div>
@@ -65,7 +70,8 @@
       <div class="card">
         <i class="fas fa-pen"></i>
         <h3>Plano de Negócio</h3>
-        <p>Desenvolvimento de um plano personalizado para sua empresa, aumentando as possibilidades de um neócio de sucesso.</p>
+        <p>Desenvolvimento de um plano personalizado para sua empresa, aumentando as possibilidades de um neócio de
+          sucesso.</p>
         <br>
         <a href="plano-de-negocio.html" class="cta-button">Conheça mais sobre nosso serviço</a>
       </div>
@@ -74,7 +80,8 @@
       <div class="card">
         <i class="fas fa-search"></i>
         <h3>Pesquisa de Mercado</h3>
-        <p>Análise de mercadob abordando diversas frentes, proporcionando melhor entendimento a cerca das decisões a serem tomadas.</p>
+        <p>Análise de mercadob abordando diversas frentes, proporcionando melhor entendimento a cerca das decisões a
+          serem tomadas.</p>
         <br>
         <a href="pesquisa-de-mercado-30.html" class="cta-button">Conheça mais sobre nosso serviço</a>
       </div>
@@ -167,7 +174,14 @@
       <i class="fab fa-whatsapp"></i>
     </a>
   </footer>
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navbarContainer = document.querySelector('.navbar-container');
 
+    hamburger.addEventListener('click', () => {
+      navbarContainer.classList.toggle('active');
+    });
+  </script>
 </body>
 
 </html>
