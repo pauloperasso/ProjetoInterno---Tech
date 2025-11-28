@@ -14,6 +14,9 @@ body {
 }
 
 /* COMENTÁRIO: Estilos da barra de navegação (navbar) - corresponde à <nav class="navbar"> no HTML */
+/* =========================
+   NAVBAR (PADRÃO GLOBAL)
+   ========================= */
 .navbar {
     background-color: white;
     padding: 10px 40px;
@@ -32,12 +35,19 @@ body {
     position: relative;
 }
 
-
 .logo {
     height: 90px;
 }
 
+/* Menu Hamburger (Desktop: Oculto) */
+.hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #0e1d60;
+}
 
+/* Links de Navegação */
 .nav-links {
     display: flex;
     align-items: center;
@@ -55,29 +65,16 @@ body {
 
 .nav-links a:hover {
     color: #0a1472;
-
 }
 
 .nav-links a.active {
     color: #0e1d60;
-
     font-weight: bold;
 }
 
+/* Dropdown */
 .dropdown {
     position: relative;
-}
-
-.dropdown>a>i {
-    margin-left: 6px;
-    font-size: 0.75rem;
-    vertical-align: middle;
-    color: #0e1d60;
-}
-
-.dropdown-content a i {
-    margin-right: 8px;
-    color: #0e1d60;
 }
 
 .dropdown-content {
@@ -103,6 +100,7 @@ body {
     display: flex;
     align-items: center;
     padding: 10px 20px;
+    font-family: 'Satoshi', sans-serif;
     color: black;
     text-decoration: none;
     transition: background-color 0.2s, color 0.2s;
@@ -120,32 +118,26 @@ body {
     transform: translateY(0);
 }
 
-
-.dropdown i {
-    margin-left: 6px;
-    font-size: 12px;
-    color: #0a1472;
-}
-
-
-.dropdown-content a i {
-    margin-right: 8px;
-    color: #0a1472;
-}
-
-
 .dropdown>a>i {
     margin-left: 6px;
     font-size: 0.75rem;
     vertical-align: middle;
+    color: #0e1d60;
 }
 
+.dropdown-content a i {
+    margin-right: 8px;
+    color: #0e1d60;
+}
+
+/* Botão CTA Navbar */
 .cta-button {
     background-color: #0e1d60;
     color: white;
     border: 2px solid #0e1d60;
     padding: 10px 18px;
     text-decoration: none;
+    font-family: 'Satoshi', sans-serif;
     border-radius: 4px;
     transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
@@ -156,7 +148,6 @@ body {
     border-color: #003fcc;
 }
 
-/* COMENTÁRIO: Seção hero (destaque) de serviços - corresponde à <section class="hero-servicos"> */
 .hero-servicos {
     background: linear-gradient(rgba(14, 29, 96, 0.85), rgba(14, 29, 96, 0.85)),
         url('https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
@@ -166,16 +157,17 @@ body {
 }
 
 .hero-servicos h1 {
+    font-family: 'Satoshi', sans-serif;
     font-size: 42px;
     margin-bottom: 15px;
 }
 
 .hero-servicos p {
+    font-family: 'Satoshi', sans-serif;
     font-size: 18px;
     opacity: 0.95;
 }
 
-/* COMENTÁRIO: Animação de fade-in para o conteúdo hero */
 .fade-in {
     opacity: 0;
     animation: fadeIn 1.5s ease forwards;
@@ -186,13 +178,13 @@ body {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
-/* COMENTÁRIO: Seção de serviços de tecnologia - corresponde à <section class="servicos-tecnologia"> */
 .servicos-tecnologia {
     padding: 80px 40px;
     max-width: 1200px;
@@ -206,35 +198,33 @@ body {
     color: #0e1d60;
 }
 
-/* COMENTÁRIO: Container dos cards de serviços - grid com 3 colunas */
 .cards-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 cards na mesma linha */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    max-width: 1200px;
+    margin: 0 auto;
     gap: 40px;
-    justify-items: center; /* centraliza cada card dentro da coluna */
-    justify-content: center; /* centraliza o grid inteiro */
-    width: 100%;
-    max-width: 1200px; /* garante alinhamento com o texto */
-    margin: 0 auto; /* centraliza o container */
 }
 
-
-/* COMENTÁRIO: Estilo individual dos cards - corresponde às <div class="card"> */
 .card {
+    flex: 1 1 300px;
     background: #fff;
     padding: 30px 20px;
     border-radius: 10px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
     max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-/* COMENTÁRIO: Efeito hover nos cards - levanta o card ao passar o mouse */
 .card:hover {
     transform: translateY(-8px);
 }
 
-/* COMENTÁRIO: Ícones dentro dos cards */
 .card i {
     font-size: 40px;
     color: #0e1d60;
@@ -242,17 +232,19 @@ body {
 }
 
 .card h3 {
+    font-family: 'Satoshi', sans-serif;
     font-size: 20px;
     margin-bottom: 10px;
 }
 
 .card p {
+    font-family: 'Satoshi', sans-serif;
     font-size: 15px;
     color: #555;
     margin-bottom: 20px;
 }
 
-/* COMENTÁRIO: Botões CTA específicos dentro dos cards */
+
 .card .cta-button {
     display: inline-block;
     background-color: #0e1d60;
@@ -264,6 +256,7 @@ body {
     border-radius: 4px;
     transition: background-color 0.3s, border-color 0.3s;
     white-space: nowrap;
+
 }
 
 .card .cta-button:hover {
@@ -271,7 +264,6 @@ body {
     border-color: #003fcc;
 }
 
-/* COMENTÁRIO: Seção de vantagens - corresponde à <section class="vantagens"> */
 .vantagens {
     background-color: #fff;
     padding: 80px 20px;
@@ -298,7 +290,6 @@ body {
     margin-bottom: 40px;
 }
 
-/* COMENTÁRIO: Grid responsivo para as vantagens */
 .vantagens-grid {
     display: flex;
     justify-content: space-between;
@@ -306,7 +297,6 @@ body {
     gap: 30px;
 }
 
-/* COMENTÁRIO: Itens individuais de vantagem */
 .vantagem {
     flex: 1 1 280px;
     max-width: 320px;
@@ -332,14 +322,13 @@ body {
     line-height: 1.5;
 }
 
-/* COMENTÁRIO: Rodapé - corresponde ao <footer class="footer"> */
 .footer {
     background: linear-gradient(to top, #030e46, #0a1472);
     color: white;
+    font-family: 'Satoshi', sans-serif;
     padding: 40px 20px 20px 20px;
 }
 
-/* COMENTÁRIO: Container do footer com layout flex responsivo */
 .footer-container {
     max-width: 1300px;
     margin: 0 auto;
@@ -398,7 +387,6 @@ body {
     color: #004aad;
 }
 
-/* COMENTÁRIO: Estilo para informações de contato no footer */
 .contact-info li {
     font-size: 14px;
     display: flex;
@@ -407,7 +395,6 @@ body {
     margin-bottom: 10px;
 }
 
-/* COMENTÁRIO: Ícones de redes sociais */
 .social-icons a {
     margin-right: 12px;
     font-size: 18px;
@@ -419,7 +406,6 @@ body {
     color: #004aad;
 }
 
-/* COMENTÁRIO: Parte inferior do footer */
 .footer-bottom {
     border-top: 1px solid rgba(255, 255, 255, 0.2);
     margin-top: 30px;
@@ -433,7 +419,6 @@ body {
     gap: 10px;
 }
 
-/* COMENTÁRIO: Botão flutuante do WhatsApp - posicionamento fixo */
 .whatsapp-button {
     position: fixed;
     bottom: 20px;
@@ -450,4 +435,163 @@ body {
 
 .whatsapp-button:hover {
     background-color: #1eb84c;
+}
+
+
+/* =========================================
+   RESPONSIVIDADE PADRÃO (MOBILE - abaixo de 777px)
+   ========================================= */
+@media (max-width: 777px) {
+
+    /* Navbar */
+    .hamburger {
+        display: block;
+        margin-left: 0;
+    }
+
+    /* Esconde os links e o botão inicialmente */
+    .navbar-container .nav-links,
+    .navbar-container .cta-button {
+        display: none;
+    }
+
+    /* Mostra quando estiver com a classe .active */
+    .nav-links.active,
+    .cta-button.active {
+        display: flex;
+    }
+
+    /* Ajuste do container para quebrar linha */
+    .navbar-container {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 0;
+    }
+
+    /* Links em coluna ocupando toda a tela */
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        gap: 12px;
+        padding-top: 15px;
+        margin-top: 0;
+    }
+
+    .nav-links li {
+        width: 100%;
+    }
+
+    .nav-links a {
+        padding: 10px 0;
+        width: 100%;
+        display: block;
+    }
+
+    /* Dropdown no Mobile: Ajuste */
+    .dropdown-content {
+        position: relative;
+        width: 100%;
+        box-shadow: none;
+        top: 0;
+        transform: none;
+        opacity: 1;
+        visibility: visible;
+        display: none;
+        padding-left: 15px;
+    }
+
+    .dropdown:hover .dropdown-content {
+        /* Desativa o hover no mobile */
+        display: none;
+    }
+
+    /* Botão CTA do menu */
+    .navbar-container .cta-button {
+        width: 90%;
+        justify-content: center;
+        text-align: center;
+        margin: 10px auto;
+    }
+
+    /* Ajustes Hero */
+    .hero-servicos h1 {
+        font-size: 28px;
+    }
+
+    .hero-servicos {
+        padding: 80px 20px;
+    }
+
+    /* Seções de Conteúdo */
+    .servicos-producao {
+        padding: 60px 20px;
+    }
+
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .card .cta-button {
+        white-space: normal;
+        /* Permite quebrar linha */
+    }
+
+    /* Vantagens */
+    .vantagens {
+        padding: 60px 20px;
+    }
+
+    .vantagens-grid {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .vantagem {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    /* Footer Responsivo */
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .footer-column {
+        min-width: 100%;
+        flex: 1 1 100%;
+    }
+
+    .footer-column h4 {
+        border-left: none;
+        padding-left: 0;
+        border-bottom: 2px solid white;
+        padding-bottom: 5px;
+        display: inline-block;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .whatsapp-button {
+        bottom: 15px;
+        right: 15px;
+        padding: 12px;
+        font-size: 18px;
+    }
 }
