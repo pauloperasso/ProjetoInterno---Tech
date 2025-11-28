@@ -31,6 +31,13 @@ body {
   height: 90px;
 }
 
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #0e1d60;
+}
+
 .nav-links {
   display: flex;
   align-items: center;
@@ -149,73 +156,75 @@ body {
 }
 
 .cta-button:hover {
-    background-color: #003fcc;
-    color: white;
-    border-color: #003fcc;
+  background-color: #003fcc;
+  color: white;
+  border-color: #003fcc;
 }
 
 /* COMENTÁRIO: Seção Hero específica para desenvolvimento de sites - corresponde à <section class="hero-sites"> */
 .hero-sites {
-    height: 50vh; /* COMENTÁRIO: Altura de 50% da viewport (tela visível) */
-    background: url("./Images/stephen-dawson-qwtCeJ5cLYs-unsplash.jpg") no-repeat center center/cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    position: relative;
+  height: 50vh;
+  /* COMENTÁRIO: Altura de 50% da viewport (tela visível) */
+  background: url("./Images/stephen-dawson-qwtCeJ5cLYs-unsplash.jpg") no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  position: relative;
 }
 
 /* COMENTÁRIO: Overlay escuro sobre a imagem de fundo para melhor contraste do texto */
 .hero-sites::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
 }
 
 /* COMENTÁRIO: Conteúdo do hero - texto e botão */
 .hero-content {
-    position: relative;
-    max-width: 700px;
-    text-align: left;
-    padding: 20px;
-    z-index: 1; /* COMENTÁRIO: Garante que o conteúdo fique acima do overlay */
+  position: relative;
+  max-width: 700px;
+  text-align: left;
+  padding: 20px;
+  z-index: 1;
+  /* COMENTÁRIO: Garante que o conteúdo fique acima do overlay */
 }
 
 .hero-content h4 {
-    font-size: 14px;
-    color: #fff;
-    margin-bottom: 10px;
+  font-size: 14px;
+  color: #fff;
+  margin-bottom: 10px;
 }
 
 .hero-content h1 {
-    font-size: 36px;
-    font-weight: bold;
-    margin-bottom: 15px;
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 15px;
 }
 
 .hero-content p {
-    font-size: 16px;
-    margin-bottom: 20px;
+  font-size: 16px;
+  margin-bottom: 20px;
 }
 
 /* COMENTÁRIO: Botão específico do hero */
 .btn {
-    display: inline-block;
-    background: #001f7d;
-    color: #fff;
-    padding: 12px 20px;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: 0.3s;
-    text-decoration: none;
+  display: inline-block;
+  background: #001f7d;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.3s;
+  text-decoration: none;
 }
 
 .btn:hover {
-    background: #0033cc;
+  background: #0033cc;
 }
 
 /* Área principal */
@@ -227,11 +236,16 @@ body {
 /* Centralização dos botões das abas de dados */
 .dados-tabs {
   display: flex;
-  justify-content: center; /* centraliza horizontalmente */
-  align-items: center;      /* centraliza verticalmente */
-  gap: 1.2rem;              /* espaçamento entre os botões */
-  flex-wrap: wrap;          /* quebra linha se necessário (mobile) */
-  margin-bottom: 2rem;      /* espaço entre os botões e o conteúdo */
+  justify-content: center;
+  /* centraliza horizontalmente */
+  align-items: center;
+  /* centraliza verticalmente */
+  gap: 1.2rem;
+  /* espaçamento entre os botões */
+  flex-wrap: wrap;
+  /* quebra linha se necessário (mobile) */
+  margin-bottom: 2rem;
+  /* espaço entre os botões e o conteúdo */
 }
 
 /* Estilo individual dos botões */
@@ -255,7 +269,8 @@ body {
 
 .tab-button.active {
   color: #0033cc;
-  border-bottom: 2px solid #0033cc; /* cor destaque da aba ativa */
+  border-bottom: 2px solid #0033cc;
+  /* cor destaque da aba ativa */
 }
 
 .tab-button:hover {
@@ -328,7 +343,7 @@ body {
 .dados-image img {
   width: 100%;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Botão fixo */
@@ -607,4 +622,227 @@ body {
 
 .whatsapp-button:hover {
   background-color: #1eb84c;
+}
+
+/* ========================================= RESPONSIVIDADE (TABLET - abaixo de 992px) ========================================= */
+@media (max-width: 992px) {
+
+  /* Navbar: Ajusta padding */
+  .navbar {
+    padding: 10px 20px;
+  }
+
+  /* Seção de Dados: Ajusta padding */
+  .dados-container {
+    padding: 60px 5%;
+    /* Ajusta o padding para telas menores */
+  }
+
+  /* Seção de Dados: Muda para layout de coluna */
+  .dados-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .dados-text {
+    text-align: center;
+  }
+
+  .dados-text h2 {
+    font-size: 28px;
+  }
+
+  .dados-buttons {
+    justify-content: center;
+    /* Centraliza os botões */
+  }
+
+  .dados-image img {
+    max-width: 80%;
+    /* Ajusta o tamanho da imagem na coluna */
+    height: auto;
+  }
+
+  /* Hero */
+  .hero-sites {
+    height: auto;
+    padding: 60px 20px;
+  }
+
+  .hero-content {
+    text-align: center;
+    max-width: 90%;
+  }
+
+  /* FAQ */
+  .faq-section {
+    padding: 60px 5%;
+  }
+
+  /* Footer (Ajuste para quebrar colunas se necessário, conforme padrão cronoanalise) */
+  .footer-container {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 30px;
+  }
+}
+
+/* ========================================= RESPONSIVIDADE (MOBILE - abaixo de 777px) ========================================= */
+@media (max-width: 777px) {
+
+  /* Navbar */
+  .hamburger {
+    display: block;
+    margin-left: 0;
+  }
+
+  /* Esconde os links e o botão inicialmente */
+  .navbar-container .nav-links,
+  .navbar-container .cta-button {
+    display: none;
+  }
+
+  /* Mostra quando estiver com a classe .active */
+  .nav-links.active,
+  .cta-button.active {
+    display: flex;
+  }
+
+  /* Ajuste do container para quebrar linha e permitir empilhamento */
+  .navbar-container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 0;
+  }
+
+  /* Links em coluna ocupando toda a largura */
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    gap: 12px;
+    padding-top: 15px;
+    margin-top: 0;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links a {
+    padding: 10px 0;
+    width: 100%;
+    display: block;
+  }
+
+  /* Dropdown no Mobile: Ajuste para mostrar conteúdo ao clicar */
+  .dropdown-content {
+    position: relative;
+    width: 100%;
+    box-shadow: none;
+    top: 0;
+    transform: none;
+    opacity: 1;
+    visibility: visible;
+    display: none;
+    padding-left: 15px;
+  }
+
+  /* Ativa o dropdown quando a classe 'active' está no li.dropdown (via JS) */
+  .dropdown.active .dropdown-content {
+    display: block;
+  }
+
+  .dropdown:hover .dropdown-content {
+    /* Desativa o hover no mobile */
+    display: none;
+  }
+
+  /* Botão CTA do menu */
+  .navbar-container .cta-button {
+    width: 90%;
+    justify-content: center;
+    text-align: center;
+    margin: 10px auto;
+  }
+
+  /* Ajustes Hero */
+  .hero-sites {
+    height: auto;
+    padding: 80px 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 28px;
+  }
+
+  .faq-item.active .faq-answer {
+    display: block;
+  }
+
+  .faq-section {
+    padding: 40px 20px;
+  }
+
+  .faq-title {
+    font-size: 26px;
+  }
+
+  .faq-question {
+    font-size: 16px;
+  }
+
+  .cta-final {
+    padding: 30px 20px;
+  }
+
+  .cta-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .cta-texto {
+    text-align: center;
+    max-width: 100%;
+  }
+
+
+  /* Footer Responsivo */
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .footer-column {
+    min-width: 100%;
+    flex: 1 1 100%;
+  }
+
+  .footer-column h4 {
+    border-left: none;
+    padding-left: 0;
+    border-bottom: 2px solid white;
+    padding-bottom: 5px;
+    display: inline-block;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .whatsapp-button {
+    bottom: 15px;
+    right: 15px;
+    padding: 12px;
+    font-size: 18px;
+  }
 }

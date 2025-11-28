@@ -33,34 +33,33 @@
   <!-- COMENTÁRIO: Barra de navegação principal - mesma estrutura da página anterior -->
   <nav class="navbar">
     <div class="navbar-container">
-      <!-- COMENTÁRIO: Logo que redireciona para a página inicial -->
       <a href="PáginaInicial.html">
         <img src="./images/Logo Horizontal com Slogam.png" alt="Logo Mauá Júnior" class="logo">
       </a>
 
-      <!-- COMENTÁRIO: Menu de navegação com links -->
+      <div class="hamburger">
+        <i class="fas fa-bars"></i>
+      </div>
+
       <ul class="nav-links">
         <li><a href="PáginaInicial.html">Home</a></li>
-        <li><a href="#">Quem Somos</a></li>
-
-        <!-- COMENTÁRIO: Dropdown de serviços - item ativo nesta página -->
+        <li><a href="Quem-somos.html">Quem Somos</a></li>
         <li class="dropdown">
           <a href="#" class="active">Serviços <i class="fas fa-angle-down"></i></a>
-          <!-- COMENTÁRIO: class="active" indica que esta é a página atual -->
           <ul class="dropdown-content">
-            <li><a href="#"><i class="fas fa-angle-right"></i> Tecnologia</a></li>
-            <li><a href="#"><i class="fas fa-angle-right"></i> Administração</a></li>
-            <li><a href="#"><i class="fas fa-angle-right"></i> Design</a></li>
-            <li><a href="#"><i class="fas fa-angle-right"></i> Engenharia de Produção</a></li>
+            <li><a href="Serviços-Tecnologia.html"><i class="fas fa-angle-right"></i> Tecnologia</a></li>
+            <li><a href="Servicos-Administracao.html"><i class="fas fa-angle-right"></i> Administração</a>
+            </li>
+            <li><a href="servicos-design.html"><i class="fas fa-angle-right"></i> Design</a></li>
+            <li><a href="servicos-producao.html"><i class="fas fa-angle-right"></i> Engenharia de
+                Produção</a></li>
             <li><a href="#"><i class="fas fa-angle-right"></i> Engenharia Química/Alimentos</a></li>
           </ul>
         </li>
-
-        <li><a href="#">Contato</a></li>
+        <li><a href="Contato.html">Contato</a></li>
       </ul>
 
-      <!-- COMENTÁRIO: Botão de Call-to-Action (CTA) -->
-      <a href="#" class="cta-button">Entre em contato conosco</a>
+      <a href="Contato.html" class="cta-button">Entre em contato conosco</a>
     </div>
   </nav>
 
@@ -137,71 +136,77 @@
   </section>
 
   <!-- COMENTÁRIO: Seção do processo de desenvolvimento -->
-<section class="processo">
-  <div class="processo-header">
-    <span class="section-subtitle">NOSSO PROCESSO</span>
-    <h2>Como o serviço será executado?</h2>
-  </div>
-
-  <div class="processo-steps">
-
-    <div class="step">
-      <div class="step-number">
-        <span>Etapa</span>
-        <h3>01</h3>
-      </div>
-      <div class="step-content">
-        <h4>Levantamento de Requisitos</h4>
-        <p>Iniciamos com um alinhamento detalhado com o cliente para entender as necessidades do sistema, os processos que serão automatizados e os resultados esperados. Essa etapa garante que o projeto tenha objetivos claros e alcance o máximo de eficiência.</p>
-      </div>
+  <section class="processo">
+    <div class="processo-header">
+      <span class="section-subtitle">NOSSO PROCESSO</span>
+      <h2>Como o serviço será executado?</h2>
     </div>
 
-    <div class="step">
-      <div class="step-number">
-        <span>Etapa</span>
-        <h3>02</h3>
-      </div>
-      <div class="step-content">
-        <h4>Arquitetura e Planejamento</h4>
-        <p>Definimos a estrutura técnica do sistema, as tecnologias a serem utilizadas e o fluxo de funcionamento. Aqui é criada toda a base lógica que sustentará o desempenho e a escalabilidade do projeto.</p>
-      </div>
-    </div>
+    <div class="processo-steps">
 
-    <div class="step">
-      <div class="step-number">
-        <span>Etapa</span>
-        <h3>03</h3>
+      <div class="step">
+        <div class="step-number">
+          <span>Etapa</span>
+          <h3>01</h3>
+        </div>
+        <div class="step-content">
+          <h4>Levantamento de Requisitos</h4>
+          <p>Iniciamos com um alinhamento detalhado com o cliente para entender as necessidades do sistema, os processos
+            que serão automatizados e os resultados esperados. Essa etapa garante que o projeto tenha objetivos claros e
+            alcance o máximo de eficiência.</p>
+        </div>
       </div>
-      <div class="step-content">
-        <h4>Design e Protótipo</h4>
-        <p>Desenvolvemos o layout e as interfaces do sistema, priorizando a usabilidade e a experiência do usuário. O cliente tem acesso a um protótipo navegável para validação antes da codificação final.</p>
-      </div>
-    </div>
 
-    <div class="step">
-      <div class="step-number">
-        <span>Etapa</span>
-        <h3>04</h3>
+      <div class="step">
+        <div class="step-number">
+          <span>Etapa</span>
+          <h3>02</h3>
+        </div>
+        <div class="step-content">
+          <h4>Arquitetura e Planejamento</h4>
+          <p>Definimos a estrutura técnica do sistema, as tecnologias a serem utilizadas e o fluxo de funcionamento.
+            Aqui é criada toda a base lógica que sustentará o desempenho e a escalabilidade do projeto.</p>
+        </div>
       </div>
-      <div class="step-content">
-        <h4>Desenvolvimento e Integrações</h4>
-        <p>Nesta fase, transformamos o planejamento em código. Implementamos todas as funcionalidades do sistema, realizamos as integrações necessárias e garantimos segurança, desempenho e responsividade.</p>
-      </div>
-    </div>
 
-    <div class="step">
-      <div class="step-number">
-        <span>Etapa</span>
-        <h3>05</h3>
+      <div class="step">
+        <div class="step-number">
+          <span>Etapa</span>
+          <h3>03</h3>
+        </div>
+        <div class="step-content">
+          <h4>Design e Protótipo</h4>
+          <p>Desenvolvemos o layout e as interfaces do sistema, priorizando a usabilidade e a experiência do usuário. O
+            cliente tem acesso a um protótipo navegável para validação antes da codificação final.</p>
+        </div>
       </div>
-      <div class="step-content">
-        <h4>Validação e Entrega</h4>
-        <p>Após os testes de desempenho e usabilidade, o sistema é homologado junto ao cliente e entregue pronto para uso. Incluímos um período de suporte pós-implantação para ajustes e acompanhamento inicial.</p>
-      </div>
-    </div>
 
-  </div>
-</section>
+      <div class="step">
+        <div class="step-number">
+          <span>Etapa</span>
+          <h3>04</h3>
+        </div>
+        <div class="step-content">
+          <h4>Desenvolvimento e Integrações</h4>
+          <p>Nesta fase, transformamos o planejamento em código. Implementamos todas as funcionalidades do sistema,
+            realizamos as integrações necessárias e garantimos segurança, desempenho e responsividade.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-number">
+          <span>Etapa</span>
+          <h3>05</h3>
+        </div>
+        <div class="step-content">
+          <h4>Validação e Entrega</h4>
+          <p>Após os testes de desempenho e usabilidade, o sistema é homologado junto ao cliente e entregue pronto para
+            uso. Incluímos um período de suporte pós-implantação para ajustes e acompanhamento inicial.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
 
 
   <!-- COMENTÁRIO: Seção FAQ (Perguntas Frequentes) -->
@@ -341,6 +346,7 @@
 
   <!-- COMENTÁRIO: Link para arquivo JavaScript específico desta página -->
   <script src="ScriptFaq.js"></script>
+  <script src="scripts.js"></script>
 </body>
 
 </html>

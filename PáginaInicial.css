@@ -14,7 +14,6 @@ body {
   background-color: white;
   padding: 10px 40px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  position: sticky;
   top: 0;
   z-index: 1000;
 }
@@ -26,6 +25,13 @@ body {
   max-width: 1300px;
   margin: 0 auto;
   position: relative;
+}
+
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #0e1d60;
 }
 
 /* Logo */
@@ -50,11 +56,13 @@ body {
 }
 
 .nav-links a:hover {
-  color: #0a1472; /* hover azul escuro */
+  color: #0a1472;
+  /* hover azul escuro */
 }
 
 .nav-links a.active {
-  color: #0e1d60; /* mega escuro */
+  color: #0e1d60;
+  /* mega escuro */
   font-weight: bold;
 }
 
@@ -62,7 +70,7 @@ body {
   position: relative;
 }
 
-.dropdown > a > i {
+.dropdown>a>i {
   margin-left: 6px;
   font-size: 0.75rem;
   vertical-align: middle;
@@ -75,7 +83,7 @@ body {
 }
 
 .dropdown-content {
-opacity: 0;
+  opacity: 0;
   visibility: hidden;
   transform: translateY(10px);
   transition: opacity 0.3s ease, transform 0.3s ease;
@@ -84,7 +92,7 @@ opacity: 0;
   top: 100%;
   left: 0;
   min-width: 220px;
-  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   z-index: 2000;
   padding: 10px 0;
 }
@@ -110,7 +118,7 @@ opacity: 0;
 
 .dropdown:hover .dropdown-content {
   display: block;
-    opacity: 1;
+  opacity: 1;
   visibility: visible;
   transform: translateY(0);
 }
@@ -126,10 +134,10 @@ opacity: 0;
 .dropdown-content a i {
   margin-right: 8px;
   color: #0a1472;
-} 
+}
 
 /* Setinha ao lado de "Serviços" mais próxima */
-.dropdown > a > i {
+.dropdown>a>i {
   margin-left: 6px;
   font-size: 0.75rem;
   vertical-align: middle;
@@ -155,23 +163,31 @@ opacity: 0;
 .hero {
   position: relative;
   width: 100%;
-  height: 65vh; /* reduzido para não ocupar toda a tela */
-  background-image: url('./images/Imagem\ Hero.jpg'); /* atualize o caminho conforme necessário */
+  height: 65vh;
+  /* reduzido para não ocupar toda a tela */
+  background-image: url('./images/Imagem\ Hero.jpg');
+  /* atualize o caminho conforme necessário */
   background-size: cover;
   background-position: center 52%;
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* alinha o conteúdo à esquerda */
-  padding-left: 7%; /* espaçamento da esquerda (ajuste conforme necessário) */
+  justify-content: flex-start;
+  /* alinha o conteúdo à esquerda */
+  padding-left: 7%;
+  /* espaçamento da esquerda (ajuste conforme necessário) */
   z-index: 0;
 }
 
 .hero::before {
   content: '';
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background-color: rgba(0, 16, 64, 0.7); /* overlay azul escuro */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 16, 64, 0.7);
+  /* overlay azul escuro */
   z-index: 1;
 }
 
@@ -209,6 +225,7 @@ opacity: 0;
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -253,14 +270,16 @@ opacity: 0;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
-  text-align: center; /* Centraliza título e subtítulo */
+  text-align: center;
+  /* Centraliza título e subtítulo */
 }
 
 .servicos-subtitulo {
   text-transform: uppercase;
   font-size: 0.85rem;
   font-weight: 600;
-  color: #0e1d60; /* Azul escuro da navbar/botão */
+  color: #0e1d60;
+  /* Azul escuro da navbar/botão */
   margin-bottom: 0.5rem;
   letter-spacing: 1px;
 }
@@ -286,7 +305,8 @@ opacity: 0;
 }
 
 .servico-icon {
-  color: #0057ff; /* Azul ícone */
+  color: #0057ff;
+  /* Azul ícone */
   font-size: 2.25rem;
   flex-shrink: 0;
   margin-top: 0.25rem;
@@ -342,7 +362,8 @@ opacity: 0;
 
 .btn-cta {
   display: inline-block;
-  background-color: #0e1d60; /* mesmo azul do botão navbar */
+  background-color: #0e1d60;
+  /* mesmo azul do botão navbar */
   color: #fff;
   padding: 12px 20px;
   font-size: 0.85rem;
@@ -453,14 +474,15 @@ opacity: 0;
 .carousel-track {
   display: flex;
   transition: transform 0.5s ease-in-out;
-  padding-bottom: 20px; /* Espaço para os dots */
+  padding-bottom: 20px;
+  /* Espaço para os dots */
 }
 
 .carousel-card {
   flex: 0 0 calc(33.3333% - 20px);
   background: white;
   border-radius: 8px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
   margin: 0 10px;
   padding: 30px;
   box-sizing: border-box;
@@ -470,7 +492,7 @@ opacity: 0;
 
 .carousel-card:hover {
   transform: translateY(-10px) scale(1.03);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
 .card-text {
@@ -698,7 +720,7 @@ opacity: 0;
 }
 
 .footer-bottom {
-  border-top: 1px solid rgba(255,255,255,0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
   margin-top: 30px;
   padding-top: 20px;
   text-align: center;
@@ -719,7 +741,7 @@ opacity: 0;
   border-radius: 50%;
   padding: 14px;
   font-size: 20px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   z-index: 999;
   transition: background-color 0.3s;
 }
@@ -732,10 +754,50 @@ opacity: 0;
    📱 CELULAR (até 777px)
 ========================================= */
 @media (max-width: 777px) {
-  .navbar-container {
+
+  .hamburger {
+    display: block;
+    margin-left: 0;
+    font-size: 28px;
+  }
+
+  .nav-links,
+  .cta-button {
+    display: none;
+  }
+
+  .nav-links.active,
+  .cta-button.active {
+    display: flex;
+  }
+
+  .nav-links {
     flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .cta-button {
+    width: 90%;
+    justify-content: center;
+  }
+
+  .hamburger i {
+    transition: transform .3s;
+  }
+
+  .hamburger.active i {
+    transform: rotate(90deg);
+  }
+
+  .navbar-container {
+    flex-direction: row;
     align-items: center;
-    gap: 10px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 0;
   }
 
   .nav-links {
@@ -934,11 +996,3 @@ opacity: 0;
     width: 95%;
   }
 }
-
-
-
-
-
-
-
-

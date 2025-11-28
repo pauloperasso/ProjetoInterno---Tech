@@ -12,17 +12,17 @@
   <!-- COMENTÁRIO: Configura a viewport para responsividade em dispositivos móveis -->
   <title>Desenvolvimento de Sites - Mauá Júnior</title>
   <!-- COMENTÁRIO: Título que aparece na aba do navegador -->
-  
+
   <link rel="stylesheet" href="desenvolvimento-de-site.css">
   <!-- COMENTÁRIO: Link para o arquivo CSS específico desta página -->
   <link rel="icon" type="image/png" href="./images/Logo Vertical.png">
   <!-- COMENTÁRIO: Favicon da página -->
-  
+
   <!-- COMENTÁRIO: Importação de fontes do Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
+
   <!-- COMENTÁRIO: Biblioteca de ícones Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
@@ -33,34 +33,33 @@
   <!-- COMENTÁRIO: Barra de navegação principal - mesma estrutura da página anterior -->
   <nav class="navbar">
     <div class="navbar-container">
-      <!-- COMENTÁRIO: Logo que redireciona para a página inicial -->
       <a href="PáginaInicial.html">
         <img src="./images/Logo Horizontal com Slogam.png" alt="Logo Mauá Júnior" class="logo">
       </a>
-      
-      <!-- COMENTÁRIO: Menu de navegação com links -->
+
+      <div class="hamburger">
+        <i class="fas fa-bars"></i>
+      </div>
+
       <ul class="nav-links">
         <li><a href="PáginaInicial.html">Home</a></li>
-        <li><a href="#">Quem Somos</a></li>
-        
-        <!-- COMENTÁRIO: Dropdown de serviços - item ativo nesta página -->
+        <li><a href="Quem-somos.html">Quem Somos</a></li>
         <li class="dropdown">
           <a href="#" class="active">Serviços <i class="fas fa-angle-down"></i></a>
-          <!-- COMENTÁRIO: class="active" indica que esta é a página atual -->
           <ul class="dropdown-content">
-            <li><a href="#"><i class="fas fa-angle-right"></i> Tecnologia</a></li>
-            <li><a href="#"><i class="fas fa-angle-right"></i> Administração</a></li>
-            <li><a href="#"><i class="fas fa-angle-right"></i> Design</a></li>
-            <li><a href="#"><i class="fas fa-angle-right"></i> Engenharia de Produção</a></li>
+            <li><a href="Serviços-Tecnologia.html"><i class="fas fa-angle-right"></i> Tecnologia</a></li>
+            <li><a href="Servicos-Administracao.html"><i class="fas fa-angle-right"></i> Administração</a>
+            </li>
+            <li><a href="servicos-design.html"><i class="fas fa-angle-right"></i> Design</a></li>
+            <li><a href="servicos-producao.html"><i class="fas fa-angle-right"></i> Engenharia de
+                Produção</a></li>
             <li><a href="#"><i class="fas fa-angle-right"></i> Engenharia Química/Alimentos</a></li>
           </ul>
         </li>
-        
-        <li><a href="#">Contato</a></li>
+        <li><a href="Contato.html">Contato</a></li>
       </ul>
-      
-      <!-- COMENTÁRIO: Botão de Call-to-Action (CTA) -->
-      <a href="#" class="cta-button">Entre em contato conosco</a>
+
+      <a href="Contato.html" class="cta-button">Entre em contato conosco</a>
     </div>
   </nav>
 
@@ -72,7 +71,8 @@
       <!-- COMENTÁRIO: Título principal da página -->
       <h1>A ponte certa entre você e o seu futuro cliente</h1>
       <!-- COMENTÁRIO: Descrição do serviço -->
-      <p>Proporcione praticidade na hora que seu cliente for buscar seu produto ou serviço e garanta um aumento considerável no número das suas vendas.</p>
+      <p>Proporcione praticidade na hora que seu cliente for buscar seu produto ou serviço e garanta um aumento
+        considerável no número das suas vendas.</p>
       <!-- COMENTÁRIO: Botão de ação principal -->
       <a href="#contato" class="btn">Entre em contato conosco</a>
     </div>
@@ -86,7 +86,10 @@
       <!-- COMENTÁRIO: Título da seção -->
       <h2>O que é o Desenvolvimento de Sites?</h2>
       <!-- COMENTÁRIO: Texto explicativo sobre o serviço -->
-      <p>Utilizando as tecnologias mais recentes do mercado, as mesmas que impulsionam as grandes empresas, desenvolvemos sites poderosos e estrategicamente otimizados que não só aumentam drasticamente sua visibilidade e geram mais lucro, mas também posicionam sua empresa para se tornar a próxima grande história de sucesso, transformando sua presença digital no alicerce do seu crescimento.</p>
+      <p>Utilizando as tecnologias mais recentes do mercado, as mesmas que impulsionam as grandes empresas,
+        desenvolvemos sites poderosos e estrategicamente otimizados que não só aumentam drasticamente sua visibilidade e
+        geram mais lucro, mas também posicionam sua empresa para se tornar a próxima grande história de sucesso,
+        transformando sua presença digital no alicerce do seu crescimento.</p>
     </div>
     <div class="oque-img">
       <!-- COMENTÁRIO: Imagem ilustrativa do serviço -->
@@ -108,19 +111,19 @@
         <h3>Autoridade</h3>
         <p>Seu produto será visto com um olhar de autoridade, o que possibilita muito o aumento das vendas.</p>
       </div>
-      
+
       <div class="beneficio">
         <i class="fas fa-bullhorn"></i>
         <h3>Vendas Online</h3>
         <p>Aumente sua chance de vender sem ter que arcar com os custos de uma loja física.</p>
       </div>
-      
+
       <div class="beneficio">
         <i class="fas fa-sitemap"></i>
         <h3>Expansão</h3>
         <p>Possibilita que seu produto atenda a necessidade de pessoas em vários cantos do Brasil.</p>
       </div>
-      
+
       <div class="beneficio">
         <i class="fas fa-money-bill-wave"></i>
         <h3>Mais Lucro</h3>
@@ -138,7 +141,7 @@
 
     <!-- COMENTÁRIO: Lista de etapas do processo -->
     <div class="processo-steps">
-      
+
       <!-- COMENTÁRIO: Etapa individual do processo -->
       <div class="step">
         <div class="step-number">
@@ -148,7 +151,8 @@
         </div>
         <div class="step-content">
           <h4>Nivelamento de conhecimento</h4>
-          <p>Começa com o alinhamento das necessidades do cliente, onde a equipe da Mauá Jr. por meio de perguntas entende e garante que o projeto atenda aos requisitos do cliente.</p>
+          <p>Começa com o alinhamento das necessidades do cliente, onde a equipe da Mauá Jr. por meio de perguntas
+            entende e garante que o projeto atenda aos requisitos do cliente.</p>
         </div>
       </div>
 
@@ -159,7 +163,8 @@
         </div>
         <div class="step-content">
           <h4>Identidade visual</h4>
-          <p>Definição dos padrões no site. Como por exemplo a tipografia, paleta de cores, tabelas, imagens e vídeos, etc.</p>
+          <p>Definição dos padrões no site. Como por exemplo a tipografia, paleta de cores, tabelas, imagens e vídeos,
+            etc.</p>
         </div>
       </div>
 
@@ -170,7 +175,8 @@
         </div>
         <div class="step-content">
           <h4>Layout do Site</h4>
-          <p>Personalização do site de acordo com as suas preferências, utilizando todos os materiais fornecidos durante o processo.</p>
+          <p>Personalização do site de acordo com as suas preferências, utilizando todos os materiais fornecidos durante
+            o processo.</p>
         </div>
       </div>
 
@@ -192,7 +198,8 @@
         </div>
         <div class="step-content">
           <h4>Período de acompanhamento</h4>
-          <p>Período de 3 meses, após a entrega do projeto, que oferecemos para monitoramento e suporte após a hospedagem do site.</p>
+          <p>Período de 3 meses, após a entrega do projeto, que oferecemos para monitoramento e suporte após a
+            hospedagem do site.</p>
         </div>
       </div>
 
@@ -214,7 +221,8 @@
         </button>
         <div class="faq-answer">
           <!-- COMENTÁRIO: Resposta que aparece ao clicar na pergunta -->
-          <p>Nossos projetos são completamente personalizados e pensados para cada cliente, portanto sua duração pode variar de acordo com a complexidade e objetivo do projeto.</p>
+          <p>Nossos projetos são completamente personalizados e pensados para cada cliente, portanto sua duração pode
+            variar de acordo com a complexidade e objetivo do projeto.</p>
           <p>Em média, esse serviço dura por volta de um mês e meio.</p>
         </div>
       </div>
@@ -225,7 +233,9 @@
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
-          <p>Mantemos uma frequente troca de mensagens e emails, além de reuniões de alinhamento. É nosso dever como empresa fornecer informações e coletar feedbacks para termos um resultado satisfatório no final do projeto.</p>
+          <p>Mantemos uma frequente troca de mensagens e emails, além de reuniões de alinhamento. É nosso dever como
+            empresa fornecer informações e coletar feedbacks para termos um resultado satisfatório no final do projeto.
+          </p>
         </div>
       </div>
 
@@ -235,8 +245,10 @@
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
-          <p>Possuímos membros capacitados e dispostos, a infraestrutura do Instituto Mauá de Tecnologia e também a orientação de diversos professores.</p>
-          <p>A satisfação de nossos clientes é coletada através de parâmetros mundialmente conhecidos, o NPS e o CSAT, e em ambos possuímos 100%, uma vez que buscamos sempre entregar o melhor ao nosso cliente.</p>
+          <p>Possuímos membros capacitados e dispostos, a infraestrutura do Instituto Mauá de Tecnologia e também a
+            orientação de diversos professores.</p>
+          <p>A satisfação de nossos clientes é coletada através de parâmetros mundialmente conhecidos, o NPS e o CSAT, e
+            em ambos possuímos 100%, uma vez que buscamos sempre entregar o melhor ao nosso cliente.</p>
         </div>
       </div>
 
@@ -246,7 +258,8 @@
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
-          <p>Agende uma conversa conosco, de maneira gratuita! Realizamos o diagnóstico de sua empresa, passando por todos os pontos principais para entender melhor o serviço para ela e como ele pode te ajudar.</p>
+          <p>Agende uma conversa conosco, de maneira gratuita! Realizamos o diagnóstico de sua empresa, passando por
+            todos os pontos principais para entender melhor o serviço para ela e como ele pode te ajudar.</p>
         </div>
       </div>
     </div>
@@ -273,7 +286,8 @@
       <div class="footer-column">
         <img src="./images/Logo Horizontal Branco com Slogam.png" alt="Logo Mauá Júnior" class="footer-logo">
         <p class="footer-description">
-          A Mauá Júnior é uma entidade sem fins lucrativos, voltada para o desenvolvimento profissional de alunos do Instituto Mauá de Tecnologia através da realização de projetos personalizados para clientes.
+          A Mauá Júnior é uma entidade sem fins lucrativos, voltada para o desenvolvimento profissional de alunos do
+          Instituto Mauá de Tecnologia através da realização de projetos personalizados para clientes.
         </p>
         <div class="social-icons">
           <a href="https://www.instagram.com/mauajr/" target="_blank"><i class="fab fa-instagram"></i></a>
@@ -329,6 +343,7 @@
 
   <!-- COMENTÁRIO: Link para arquivo JavaScript específico desta página -->
   <script src="ScriptFaq.js"></script>
+  <script src="scripts.js"></script>
 </body>
 
 </html>

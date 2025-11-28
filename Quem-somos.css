@@ -1,8 +1,3 @@
-/* HERO */
-/* Reset básico */
-
-/* Reset global */
-
 * {
   margin: 0;
   padding: 0;
@@ -17,7 +12,6 @@ body {
   width: 100%;
 }
 
-/* Navbar */
 body {
   font-family: 'Poppins', sans-serif;
 }
@@ -44,7 +38,14 @@ body {
   height: 90px;
 }
 
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #0e1d60;
+}
 
+/* Links */
 .nav-links {
   display: flex;
   align-items: center;
@@ -55,7 +56,6 @@ body {
 .nav-links a {
   text-decoration: none;
   color: black;
-  font-family: 'Satoshi', sans-serif;
   font-size: 16px;
   position: relative;
   transition: color 0.3s;
@@ -67,39 +67,12 @@ body {
 
 .nav-links a.active {
   color: #0e1d60;
-
   font-weight: bold;
 }
 
-.nav-menu {
-  display: flex;
-  align-items: center;
-  gap: 25px;
-}
-
-.hamburger {
-  background: none;
-  border: none;
-  font-size: 26px;
-  color: var(--ink);
-  cursor: pointer;
-  display: none;
-}
-
+/* Dropdown */
 .dropdown {
   position: relative;
-}
-
-.dropdown>a>i {
-  margin-left: 6px;
-  font-size: 0.75rem;
-  vertical-align: middle;
-  color: #0e1d60;
-}
-
-.dropdown-content a i {
-  margin-right: 8px;
-  color: #0e1d60;
 }
 
 .dropdown-content {
@@ -143,26 +116,19 @@ body {
   transform: translateY(0);
 }
 
-
-.dropdown i {
-  margin-left: 6px;
-  font-size: 12px;
-  color: #0a1472;
-}
-
-
-.dropdown-content a i {
-  margin-right: 8px;
-  color: #0a1472;
-}
-
-
 .dropdown>a>i {
   margin-left: 6px;
   font-size: 0.75rem;
   vertical-align: middle;
+  color: #0e1d60;
 }
 
+.dropdown-content a i {
+  margin-right: 8px;
+  color: #0e1d60;
+}
+
+/* Botão CTA */
 .cta-button {
   background-color: #0e1d60;
   color: white;
@@ -936,5 +902,46 @@ body {
 
   .footer-bottom {
     flex-direction: column;
+  }
+}
+
+@media (max-width: 777px) {
+  .hamburger {
+    display: block;
+    margin-left: 0;
+  }
+
+  .nav-links,
+  .cta-button {
+    display: none;
+  }
+
+  .nav-links.active,
+  .cta-button.active {
+    display: flex;
+  }
+
+  .navbar-container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 0;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    gap: 12px;
+    padding-top: 15px;
+  }
+
+  .cta-button {
+    width: 90%;
+    justify-content: center;
+    text-align: center;
+    margin: 10px auto; 
   }
 }

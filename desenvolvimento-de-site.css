@@ -14,16 +14,18 @@ body {
 }
 
 /* COMENTÁRIO: Estilos da barra de navegação (navbar) - corresponde à <nav class="navbar"> */
+/* =========================
+   NAVBAR (PADRÃO GLOBAL)
+   ========================= */
 .navbar {
     background-color: white;
     padding: 10px 40px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    position: sticky; /* COMENTÁRIO: Faz a navbar ficar fixa no topo ao rolar a tela */
+    position: sticky;
     top: 0;
-    z-index: 1000; /* COMENTÁRIO: Garante que a navbar fique acima de outros elementos */
+    z-index: 1000;
 }
 
-/* COMENTÁRIO: Container da navbar - organiza logo, links e botão CTA */
 .navbar-container {
     display: flex;
     align-items: center;
@@ -33,12 +35,19 @@ body {
     position: relative;
 }
 
-/* COMENTÁRIO: Estilo do logo - corresponde à <img class="logo"> */
 .logo {
     height: 90px;
 }
 
-/* COMENTÁRIO: Lista de links de navegação - corresponde à <ul class="nav-links"> */
+/* Menu Hamburger (Desktop: Oculto) */
+.hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #0e1d60;
+}
+
+/* Links de Navegação */
 .nav-links {
     display: flex;
     align-items: center;
@@ -46,31 +55,29 @@ body {
     list-style: none;
 }
 
-/* COMENTÁRIO: Estilo dos links dentro da navbar */
 .nav-links a {
     text-decoration: none;
     color: black;
+    font-family: 'Poppins', sans-serif;
     font-size: 16px;
     position: relative;
-    transition: color 0.3s; /* COMENTÁRIO: Transição suave para hover */
+    transition: color 0.3s;
 }
 
 .nav-links a:hover {
     color: #0a1472;
 }
 
-/* COMENTÁRIO: Estilo para link ativo (página atual) */
 .nav-links a.active {
     color: #0e1d60;
     font-weight: bold;
 }
 
-/* COMENTÁRIO: Container do dropdown de serviços */
+/* Dropdown */
 .dropdown {
     position: relative;
 }
 
-/* COMENTÁRIO: Conteúdo do dropdown (menu que aparece) - corresponde à <ul class="dropdown-content"> */
 .dropdown-content {
     opacity: 0;
     visibility: hidden;
@@ -86,7 +93,25 @@ body {
     padding: 10px 0;
 }
 
-/* COMENTÁRIO: Mostra o dropdown ao passar o mouse */
+.dropdown-content li {
+    list-style: none;
+}
+
+.dropdown-content a {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    font-family: 'Poppins', sans-serif;
+    color: black;
+    text-decoration: none;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.dropdown-content a:hover {
+    background-color: #f0f0f0;
+    color: #0a1472;
+}
+
 .dropdown:hover .dropdown-content {
     display: block;
     opacity: 1;
@@ -94,13 +119,26 @@ body {
     transform: translateY(0);
 }
 
-/* COMENTÁRIO: Botão Call-to-Action (CTA) - corresponde aos <a class="cta-button"> */
+.dropdown>a>i {
+    margin-left: 6px;
+    font-size: 0.75rem;
+    vertical-align: middle;
+    color: #0e1d60;
+}
+
+.dropdown-content a i {
+    margin-right: 8px;
+    color: #0e1d60;
+}
+
+/* Botão CTA Navbar */
 .cta-button {
     background-color: #0e1d60;
     color: white;
     border: 2px solid #0e1d60;
     padding: 10px 18px;
     text-decoration: none;
+    font-family: 'Poppins', sans-serif;
     border-radius: 4px;
     transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
@@ -111,9 +149,12 @@ body {
     border-color: #003fcc;
 }
 
-/* COMENTÁRIO: Seção Hero específica para desenvolvimento de sites - corresponde à <section class="hero-sites"> */
+/* =========================
+   ESTILOS ESPECÍFICOS (PADRONIZAÇÃO)
+   ========================= */
+
 .hero-sites {
-    height: 50vh; /* COMENTÁRIO: Altura de 50% da viewport (tela visível) */
+    height: 50vh;
     background: url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1600&q=80") no-repeat center center/cover;
     display: flex;
     align-items: center;
@@ -122,7 +163,6 @@ body {
     position: relative;
 }
 
-/* COMENTÁRIO: Overlay escuro sobre a imagem de fundo para melhor contraste do texto */
 .hero-sites::after {
     content: "";
     position: absolute;
@@ -133,13 +173,12 @@ body {
     background: rgba(0, 0, 0, 0.5);
 }
 
-/* COMENTÁRIO: Conteúdo do hero - texto e botão */
 .hero-content {
     position: relative;
     max-width: 700px;
     text-align: left;
     padding: 20px;
-    z-index: 1; /* COMENTÁRIO: Garante que o conteúdo fique acima do overlay */
+    z-index: 1;
 }
 
 .hero-content h4 {
@@ -159,7 +198,6 @@ body {
     margin-bottom: 20px;
 }
 
-/* COMENTÁRIO: Botão específico do hero */
 .btn {
     display: inline-block;
     background: #001f7d;
@@ -175,7 +213,15 @@ body {
     background: #0033cc;
 }
 
-/* COMENTÁRIO: Seção "O que é" - layout de duas colunas - corresponde à <section class="oque-section"> */
+section {
+    text-align: justify;
+}
+
+section p {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
 .oque-section {
     display: flex;
     justify-content: space-between;
@@ -185,7 +231,7 @@ body {
 }
 
 .oque-text {
-    flex: 1; /* COMENTÁRIO: Ocupa 1 fração do espaço disponível */
+    flex: 1;
 }
 
 .oque-text .section-subtitle {
@@ -209,7 +255,7 @@ body {
 }
 
 .oque-img {
-    flex: 1; /* COMENTÁRIO: Ocupa 1 fração do espaço disponível, igual ao texto */
+    flex: 1;
 }
 
 .oque-img img {
@@ -217,7 +263,6 @@ body {
     border-radius: 8px;
 }
 
-/* COMENTÁRIO: Seção de benefícios - corresponde à <section class="beneficios"> */
 .beneficios {
     text-align: center;
     padding: 60px 5%;
@@ -238,15 +283,13 @@ body {
     margin-bottom: 40px;
 }
 
-/* COMENTÁRIO: Grid com 4 colunas para os benefícios */
 .beneficios-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* COMENTÁRIO: Cria 4 colunas de tamanho igual */
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px 20px;
     justify-content: center;
 }
 
-/* COMENTÁRIO: Item individual de benefício */
 .beneficio {
     text-align: center;
     max-width: 320px;
@@ -268,11 +311,10 @@ body {
 .beneficio p {
     font-size: 14px;
     color: #444;
-    text-align: justify; /* COMENTÁRIO: Texto alinhado às margens */
+    text-align: center;
     margin: 0 auto;
 }
 
-/* COMENTÁRIO: Seção do processo - corresponde à <section class="processo"> */
 .processo {
     text-align: center;
     padding: 60px 20px;
@@ -297,14 +339,12 @@ body {
     color: #000;
 }
 
-/* COMENTÁRIO: Container das etapas do processo */
 .processo-steps {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-/* COMENTÁRIO: Etapa individual do processo */
 .processo-steps .step {
     display: flex;
     align-items: flex-start;
@@ -315,7 +355,7 @@ body {
 
 .step-number {
     text-align: center;
-    min-width: 80px; /* COMENTÁRIO: Largura mínima para o número da etapa */
+    min-width: 80px;
 }
 
 .step-number span {
@@ -347,7 +387,6 @@ body {
     max-width: 700px;
 }
 
-/* COMENTÁRIO: Seção FAQ (Perguntas Frequentes) - corresponde à <section class="faq-section"> */
 .faq-section {
     padding: 80px 20px;
     background: #fff;
@@ -375,7 +414,6 @@ body {
     text-align: left;
 }
 
-/* COMENTÁRIO: Item individual do FAQ */
 .faq-item {
     border-bottom: 1px solid #eee;
     margin-bottom: 15px;
@@ -400,10 +438,9 @@ body {
 .faq-icon {
     font-size: 22px;
     color: #0061f2;
-    transition: transform 0.3s ease; /* COMENTÁRIO: Transição para rotação do ícone */
+    transition: transform 0.3s ease;
 }
 
-/* COMENTÁRIO: Resposta do FAQ - inicialmente escondida */
 .faq-answer {
     max-height: 0;
     overflow: hidden;
@@ -418,17 +455,16 @@ body {
     line-height: 1.6;
 }
 
-/* COMENTÁRIO: Estados ativos do FAQ (quando expandido) */
 .faq-item.active .faq-answer {
     max-height: 500px;
     opacity: 1;
 }
 
 .faq-item.active .faq-icon {
-    transform: rotate(45deg); /* COMENTÁRIO: Transforma "+" em "×" */
+    transform: rotate(45deg);
 }
 
-/* COMENTÁRIO: Seção final de Call-to-Action - corresponde à <section class="cta-final"> */
+
 .cta-final {
     background: #0046ff;
     padding: 30px 10%;
@@ -486,10 +522,10 @@ body {
     width: 100%;
 }
 
-/* COMENTÁRIO: Rodapé - corresponde ao <footer class="footer"> */
 .footer {
     background: linear-gradient(to top, #030e46, #0a1472);
     color: white;
+    font-family: 'Poppins', sans-serif;
     padding: 40px 20px 20px 20px;
 }
 
@@ -551,7 +587,6 @@ body {
     color: #004aad;
 }
 
-/* COMENTÁRIO: Estilo para informações de contato no footer */
 .contact-info li {
     font-size: 14px;
     display: flex;
@@ -560,7 +595,6 @@ body {
     margin-bottom: 10px;
 }
 
-/* COMENTÁRIO: Ícones de redes sociais */
 .social-icons a {
     margin-right: 12px;
     font-size: 18px;
@@ -572,7 +606,6 @@ body {
     color: #004aad;
 }
 
-/* COMENTÁRIO: Parte inferior do footer */
 .footer-bottom {
     border-top: 1px solid rgba(255, 255, 255, 0.2);
     margin-top: 30px;
@@ -586,7 +619,6 @@ body {
     gap: 10px;
 }
 
-/* COMENTÁRIO: Botão flutuante do WhatsApp - posicionamento fixo */
 .whatsapp-button {
     position: fixed;
     bottom: 20px;
@@ -606,150 +638,223 @@ body {
 }
 
 /* =========================================
-   📱 CELULAR (até 777px)
-========================================= */
-@media (max-width: 777px) {
-  .navbar-container {
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-  }
+   RESPONSIVIDADE PADRÃO (TABLET - abaixo de 992px)
+   ========================================= */
+@media (max-width: 992px) {
 
-  .logo {
-    width: 160px;
-    margin-bottom: 0.5rem;
-  }
+    /* Fixes para tablet */
+    .oque-section {
+        flex-direction: column;
+        gap: 30px;
+    }
 
-  .nav-links {
-    display: flex !important;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.8rem;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    text-align: center;
-  }
+    .beneficios-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
 
-  .nav-links li a {
-    font-size: 1rem;
-    color: #000;
-    text-decoration: none;
-    transition: color 0.3s;
-  }
+    .cta-container {
+        justify-content: center;
+        text-align: center;
+    }
 
-  .nav-links li a:hover,
-  .nav-links li a.active {
-    color: #0e1d60;
-  }
-
-  .cta-button {
-    display: inline-block;
-    width: 90%;
-    margin-top: 1rem;
-    padding: 10px 18px;
-    background-color: #0e1d60;
-    color: #fff;
-    border: 2px solid #0e1d60;
-    font-weight: 600;
-    border-radius: 4px;
-    text-decoration: none;
-    text-align: center;
-    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
-  }
-
-  .cta-button:hover {
-    background-color: #fff;
-    color: #0e1d60;
-  }
-
-  .dropdown-content {
-    position: static;
-    box-shadow: none;
-    background: transparent;
-    margin-top: 0.5rem;
-  }
-
-  .dropdown-content li {
-    padding: 0;
-  }
-
-  .dropdown-content a {
-    font-size: 0.95rem;
-    color: #000;
-  }
+    .cta-texto {
+        text-align: center;
+    }
 }
 
 /* =========================================
-   💻 TABLET (778px até 991px)
-========================================= */
-@media (min-width: 778px) and (max-width: 991px) {
-  .navbar-container {
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-  }
+   RESPONSIVIDADE PADRÃO (MOBILE - abaixo de 777px)
+   ========================================= */
+@media (max-width: 777px) {
 
-  .logo {
-    width: 180px;
-    margin-bottom: 0.8rem;
-  }
+    /* Navbar */
+    .hamburger {
+        display: block;
+        margin-left: 0;
+    }
 
-  .nav-links {
-    display: flex !important;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.9rem;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    text-align: center;
-  }
+    /* Esconde os links e o botão inicialmente */
+    .navbar-container .nav-links,
+    .navbar-container .cta-button {
+        display: none;
+    }
 
-  .nav-links li a {
-    font-size: 1.05rem;
-    color: #000;
-    text-decoration: none;
-    transition: color 0.3s;
-  }
+    /* Mostra quando estiver com a classe .active */
+    .nav-links.active,
+    .cta-button.active {
+        display: flex;
+    }
 
-  .nav-links li a:hover,
-  .nav-links li a.active {
-    color: #0e1d60;
-  }
+    /* Ajuste do container para quebrar linha e permitir empilhamento */
+    .navbar-container {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 0;
+    }
 
-  .cta-button {
-    display: inline-block;
-    margin-top: 1rem;
-    padding: 10px 18px;
-    background-color: #0e1d60;
-    color: #fff;
-    border: 2px solid #0e1d60;
-    font-weight: 600;
-    border-radius: 4px;
-    text-decoration: none;
-    text-align: center;
-    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
-  }
+    /* Links em coluna ocupando toda a largura */
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        gap: 12px;
+        padding-top: 15px;
+        margin-top: 0;
+    }
 
-  .cta-button:hover {
-    background-color: #fff;
-    color: #0e1d60;
-  }
+    .nav-links li {
+        width: 100%;
+    }
 
-  .dropdown-content {
-    position: static;
-    box-shadow: none;
-    background: transparent;
-    margin-top: 0.5rem;
-  }
+    .nav-links a {
+        padding: 10px 0;
+        width: 100%;
+        display: block;
+    }
 
-  .dropdown-content li {
-    padding: 0;
-  }
+    /* Dropdown no Mobile: Ajuste para mostrar conteúdo ao clicar */
+    .dropdown-content {
+        position: relative;
+        width: 100%;
+        box-shadow: none;
+        top: 0;
+        transform: none;
+        opacity: 1;
+        visibility: visible;
+        display: none;
+        padding-left: 15px;
+    }
 
-  .dropdown-content a {
-    font-size: 1rem;
-    color: #000;
-  }
+    /* Ativa o dropdown quando a classe 'active' está no li.dropdown (via JS) */
+    .dropdown.active .dropdown-content {
+        display: block;
+    }
+
+    .dropdown:hover .dropdown-content {
+        /* Desativa o hover no mobile */
+        display: none;
+    }
+
+    /* Botão CTA do menu */
+    .navbar-container .cta-button {
+        width: 90%;
+        justify-content: center;
+        text-align: center;
+        margin: 10px auto;
+    }
+
+    /* Ajustes Hero */
+    .hero-sites {
+        height: auto;
+        padding: 80px 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 28px;
+    }
+
+    /* Seções de Conteúdo */
+    .oque-section {
+        padding: 40px 20px;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .oque-text h2 {
+        font-size: 24px;
+    }
+
+    .beneficios {
+        padding: 40px 20px;
+    }
+
+    .beneficios-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .processo {
+        padding: 40px 20px;
+    }
+
+    .processo-header h2 {
+        font-size: 24px;
+    }
+
+    .processo-steps .step {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .step-content {
+        text-align: center;
+    }
+
+    .faq-section {
+        padding: 40px 20px;
+    }
+
+    .faq-title {
+        font-size: 26px;
+    }
+
+    .faq-question {
+        font-size: 16px;
+    }
+
+    .cta-final {
+        padding: 30px 20px;
+    }
+
+    .cta-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .cta-texto {
+        text-align: center;
+        max-width: 100%;
+    }
+
+
+    /* Footer Responsivo */
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .footer-column {
+        min-width: 100%;
+        flex: 1 1 100%;
+    }
+
+    .footer-column h4 {
+        border-left: none;
+        padding-left: 0;
+        border-bottom: 2px solid white;
+        padding-bottom: 5px;
+        display: inline-block;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .whatsapp-button {
+        bottom: 15px;
+        right: 15px;
+        padding: 12px;
+        font-size: 18px;
+    }
 }

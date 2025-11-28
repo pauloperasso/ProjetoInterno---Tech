@@ -74,41 +74,19 @@ function animateCounters() {
 // Garante que a animação só roda depois do carregamento da página
 window.addEventListener("load", animateCounters);
 
-document.addEventListener("DOMContentLoaded", function() {
-  
-  const hamburger = document.getElementById('hamburger');
-  const navMenu = document.getElementById('nav-menu');
-  const dropdownLi = document.querySelector('.dropdown');
-  const dropdownLink = document.querySelector('.dropdown > a');
-  const mediaQuery = window.matchMedia('(max-width: 768px)');
-  
+const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    const cta = document.querySelector('.cta-button');
 
-  if (hamburger && navMenu) {
-    const hamburgerIcon = hamburger.querySelector('i');
+    hamburger.addEventListener('click', function () {
+      navLinks.classList.toggle('active');
+      cta.classList.toggle('active');
+      hamburger.classList.toggle('active');
 
-    hamburger.addEventListener('click', () => {
-      navMenu.classList.toggle('active');  
-      
-      // Troca de ícones: fa-bars (hamburguer) para fa-times (x)
-      if (navMenu.classList.contains('active')) {
-        hamburgerIcon.classList.remove('fa-bars');
-        hamburgerIcon.classList.add('fa-times'); 
+      // Alterna o ícone entre Barras e X
+      if (hamburger.classList.contains('active')) {
+        hamburger.innerHTML = '<i class="fas fa-times"></i>';
       } else {
-        hamburgerIcon.classList.remove('fa-times');
-        hamburgerIcon.classList.add('fa-bars');
-        dropdownLi.classList.remove('active'); // Fecha o dropdown ao fechar o menu principal
+        hamburger.innerHTML = '<i class="fas fa-bars"></i>';
       }
     });
-    
-    // Adiciona evento de clique para o dropdown no mobile
-    if (dropdownLink && dropdownLi) {
-        dropdownLink.addEventListener('click', (e) => {
-            // Verifica se está na media query de mobile
-            if (mediaQuery.matches) {
-                e.preventDefault();
-                dropdownLi.classList.toggle('active');
-            }
-        });
-    }
-  }
-});
