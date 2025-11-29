@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!-- 
+  COMENTÁRIO: Declaração do documento HTML5 em português brasileiro
+-->
+
+<head>
+  <!-- COMENTÁRIO: Seção de metadados - informações técnicas da página -->
+  <meta charset="UTF-8">
+  <!-- COMENTÁRIO: Define a codificação de caracteres para suportar acentos e caracteres especiais -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- COMENTÁRIO: Configura a viewport para responsividade em dispositivos móveis -->
+  <title>Estudos de Embalagens - Mauá Júnior</title>
+  <!-- COMENTÁRIO: Título que aparece na aba do navegador -->
+
+  <link rel="stylesheet" href="Estudo-de-embalagem.css">
+  <!-- COMENTÁRIO: Link para o arquivo CSS específico desta página -->
+  <link rel="icon" type="image/png" href="./images/Logo Vertical.png">
+  <!-- COMENTÁRIO: Favicon da página -->
+
+  <!-- COMENTÁRIO: Importação de fontes do Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- COMENTÁRIO: Biblioteca de ícones Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+  <!-- COMENTÁRIO: Corpo da página - todo conteúdo visível fica aqui -->
+
+  <!-- COMENTÁRIO: Barra de navegação principal - mesma estrutura da página anterior -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <!-- COMENTÁRIO: Logo que redireciona para a página inicial -->
+      <a href="PáginaInicial.html">
+        <img src="./images/Logo Horizontal com Slogam.png" alt="Logo Mauá Júnior" class="logo">
+      </a>
+
+      <!-- COMENTÁRIO: Menu de navegação com links -->
+      <ul class="nav-links">
+        <li><a href="PáginaInicial.html">Home</a></li>
+        <li><a href="#">Quem Somos</a></li>
+
+        <!-- COMENTÁRIO: Dropdown de serviços - item ativo nesta página -->
+        <li class="dropdown">
+          <a href="#" class="active">Serviços <i class="fas fa-angle-down"></i></a>
+          <!-- COMENTÁRIO: class="active" indica que esta é a página atual -->
+          <ul class="dropdown-content">
+            <li><a href="#"><i class="fas fa-angle-right"></i> Tecnologia</a></li>
+            <li><a href="#"><i class="fas fa-angle-right"></i> Administração</a></li>
+            <li><a href="#"><i class="fas fa-angle-right"></i> Design</a></li>
+            <li><a href="#"><i class="fas fa-angle-right"></i> Engenharia de Produção</a></li>
+            <li><a href="#"><i class="fas fa-angle-right"></i> Engenharia Química/Alimentos</a></li>
+          </ul>
+        </li>
+
+        <li><a href="#">Contato</a></li>
+      </ul>
+
+      <!-- COMENTÁRIO: Botão de Call-to-Action (CTA) -->
+      <a href="#" class="cta-button">Entre em contato conosco</a>
+    </div>
+  </nav>
+
+  <!-- COMENTÁRIO: Seção Hero - banner principal da página -->
+  <section class="hero-sites">
+    <div class="hero-content">
+      <!-- COMENTÁRIO: Subtítulo do hero -->
+      <h4>Estudos de Embalagens</h4>
+      <!-- COMENTÁRIO: Título principal da página -->
+      <h1>Entenda qual é a melhor embalagem para o seu produto</h1>
+      <!-- COMENTÁRIO: Descrição do serviço -->
+      <p>O Estudo de Embalagem consiste em garantir maior conservação para o
+        seu produto por meio de uma avaliação de estabilidade físico-química.</p>
+      <!-- COMENTÁRIO: Botão de ação principal -->
+      <a href="#contato" class="btn">Entre em contato conosco</a>
+    </div>
+  </section>
+
+  <!-- COMENTÁRIO: Seção explicativa "O que é" -->
+  <section class="oque-section">
+    <div class="oque-text">
+      <!-- COMENTÁRIO: Subtítulo da seção -->
+      <span class="section-subtitle">O que é</span>
+      <!-- COMENTÁRIO: Título da seção -->
+      <h2>O que é o estudo de embalagem?</h2>
+      <!-- COMENTÁRIO: Texto explicativo sobre o serviço -->
+      <p>O Estudo de Embalagem tem como principal objetivo aprimorar a conservação do seu alimento e, assim, aumentar o
+        tempo de vida de prateleira. Além disso, tem como intuito, também, indicar materiais mais adequados para uma
+        embalagem mais resistente e funcional para o consumidor.
+      </p>
+    </div>
+    <div class="oque-img">
+      <!-- COMENTÁRIO: Imagem ilustrativa do serviço -->
+      <img src="Images/pexels-mikhail-nilov-6969765.jpg" alt="Estudo de Embalagens">
+    </div>
+  </section>
+
+  <!-- COMENTÁRIO: Seção de benefícios do serviço -->
+  <section class="beneficios">
+    <span class="section-subtitle">Benefícios</span>
+    <h2>O Estudo de Embalagens é para quem busca:</h2>
+
+    <!-- COMENTÁRIO: Grid com os benefícios em formato de cards -->
+    <div class="beneficios-grid">
+      <!-- COMENTÁRIO: Card individual de benefício -->
+      <div class="beneficio">
+        <i class="fas fa-chart-bar"></i>
+        <h3>Maior conservação do alimento</h3>
+        <p>Prolongue a vida útil do seu produto através do estudo de uma
+          embalagens mais eficientes.</p>
+      </div>
+
+      <div class="beneficio">
+        <i class="fas fa-box-open"></i>
+        <h3>Embalagem mais resistente</h3>
+        <p> Garanta uma embalagem mais resistente de maneira a evitar danos
+          físicos do produto durante transporte ou quedas acidentais.</p>
+      </div>
+
+      <div class="beneficio">
+        <i class="fas fa-chart-line"></i>
+        <h3>Melhor experiência de consumo</h3>
+        <p>Garanta uma embalagem mais funcional para o seu produto de modo a promover uma melhor experiência de consumo.
+        </p>
+      </div>
+  </section>
+
+  <!-- COMENTÁRIO: Seção do processo de desenvolvimento -->
+<section class="processo">
+    <div class="processo-header">
+      <span class="section-subtitle">NOSSO PROCESSO</span>
+      <h2>Como o serviço será executado?</h2>
+    </div>
+
+    <div class="processo-steps">
+
+      <div class="step">
+        <div class="step-number">
+          <span>Etapa</span>
+          <h3>01</h3>
+        </div>
+        <div class="step-content">
+          <h4>Alinhamento com o Cliente</h4>
+          <p>Realizamos uma conversa detalhada para entender as necessidades do cliente e definimos o escopo do projeto.
+          </p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-number">
+          <span>Etapa</span>
+          <h3>02</h3>
+        </div>
+        <div class="step-content">
+          <h4>Estudo de mercado</h4>
+          <p>Em seguida, nossos consultores irão realizar uma apuração em relação ao posicionamento de produtos
+            similares presentes no mercado, para analisar forma, tamanho e funcionalidade das embalagens e possíveis
+            pontos de aprimoramento.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-number">
+          <span>Etapa</span>
+          <h3>03</h3>
+        </div>
+        <div class="step-content">
+          <h4>Design da embalagem</h4>
+          <p>Nesta etapa é definida a experiência do usuário ao ver, abrir, usar e fechar a embalagem. Serão
+            considerados também todos os aspectos visuais que representam e promovem a identidade visual da marca. Além
+            disso, os consultores irão desenvolver a tabela de informação nutricional.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-number">
+          <span>Etapa</span>
+          <h3>04</h3>
+        </div>
+        <div class="step-content">
+          <h4>Procedimento de Produção</h4>
+          <p> Com o design da embalagem definido, os consultores irão estudar a viabilidade da implementação do modelo.
+            Para otimizar a embalagem desenvolvida, será realizada uma pesquisa dos possíveis materiais e métodos de
+            fabricação. De acordo com a necessidade do cliente, podemos realizar uma pesquisa de possíveis fornecedores
+            da embalagem.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-number">
+          <span>Etapa</span>
+          <h3>05</h3>
+        </div>
+        <div class="step-content">
+          <h4>Avaliação da embalagem</h4>
+          <p>
+            Nesta etapa é feita, conforme alinhado nos processos anteriores, a avaliação do protótipo no que se refere à
+            qualidade protetora da embalagem.
+          </p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-number">
+          <span>Etapa</span>
+          <h3>06</h3>
+        </div>
+        <div class="step-content">
+          <h4>Finalização e Entregáveis</h4>
+          <p>
+            Por fim, a conclusão do projeto se dá por meio de uma reunião para apresentação de todos os resultados obtidos
+            e entregáveis anteriormente acordados com o Contratante. Dentre esses está o protótipo 3D da embalagem
+            estudada e formalizada para utilização.
+          </p>
+        </div>
+      </div>
+      
+    </div> <!-- Fechamento correto do .processo-steps -->
+</section>
+
+
+  <!-- COMENTÁRIO: Seção FAQ (Perguntas Frequentes) -->
+  <section class="faq-section">
+    <div class="faq-container">
+      <h4 class="faq-subtitle">FAQ</h4>
+      <h2 class="faq-title">Perguntas Frequentes</h2>
+
+      <!-- COMENTÁRIO: Item individual do FAQ -->
+      <div class="faq-item">
+        <button class="faq-question">
+          Qual a duração média do projeto?
+          <span class="faq-icon">+</span>
+          <!-- COMENTÁRIO: Ícone que provavelmente vira "-" quando é expandido -->
+        </button>
+        <div class="faq-answer">
+          <!-- COMENTÁRIO: Resposta que aparece ao clicar na pergunta -->
+          <p>Nossos projetos são completamente personalizados e pensados para cada cliente, portanto sua duração pode
+            variar de acordo com a complexidade e objetivo do projeto.</p>
+          <p>Entre em contato conosco para mais informações sobre prazo e logística.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Como acontece o contato com o cliente?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Mantemos uma frequente troca de mensagens e emails, além de reuniões de alinhamento. É nosso dever como
+            empresa fornecer informações e coletar feedbacks para termos um resultado satisfatório no final do projeto.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          O serviço prestado é de qualidade?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Possuímos membros capacitados e dispostos, a infraestrutura do Instituto Mauá de Tecnologia e também a
+            orientação de diversos professores.</p>
+          <p>A satisfação de nossos clientes é coletada através de parâmetros mundialmente conhecidos, o NPS e o CSAT, e
+            em ambos possuímos 100%, uma vez que buscamos sempre entregar o melhor ao nosso cliente.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Como posso ter certeza que esse é o serviço certo para minha empresa?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Agende uma conversa conosco, de maneira gratuita! Realizamos o diagnóstico de sua empresa, passando por
+            todos os pontos principais para entender melhor o serviço para ela e como ele pode te ajudar.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMENTÁRIO: Seção final de Call-to-Action -->
+  <section class="cta-final">
+    <div class="cta-container">
+      <div class="cta-texto">
+        <span class="cta-sub">NÃO ENCONTROU O QUE PRECISAVA?</span>
+        <h2>Não é esse o serviço que sua empresa procura?<br> Consulte na página de serviços!</h2>
+        <!-- COMENTÁRIO: <br> quebra a linha no meio do título -->
+        <a href="#servicos" class="cta-btn">Ver todos os serviços</a>
+      </div>
+      <div class="cta-img">
+        <img src="https://mauajr.com.br/wp-content/uploads/2022/10/atendimento.png" alt="Atendimento">
+      </div>
+    </div>
+  </section>
+
+  <!-- COMENTÁRIO: Rodapé da página (igual ao da página anterior) -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-column">
+        <img src="./images/Logo Horizontal Branco com Slogam.png" alt="Logo Mauá Júnior" class="footer-logo">
+        <p class="footer-description">
+          A Mauá Júnior é uma entidade sem fins lucrativos, voltada para o desenvolvimento profissional de alunos do
+          Instituto Mauá de Tecnologia através da realização de projetos personalizados para clientes.
+        </p>
+        <div class="social-icons">
+          <a href="https://www.instagram.com/mauajr/" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://api.whatsapp.com/send?phone=5511948199383&text=Ol%C3%A1!%20Estou%20entrando%20em%20contato%20diretamente%20pelo%20link%20do%20site%20e%20gostaria%20de%20solu%C3%A7%C3%B5es%20na%20%C3%A1rea%20de%20[especifique%20a%20%C3%A1rea%20de%20interesse]."
+            target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://www.linkedin.com/company/mauajr/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h4>Páginas</h4>
+        <ul>
+          <li><a href="#"><i class="fas fa-chevron-right"></i> Home</a></li>
+          <li><a href="#"><i class="fas fa-chevron-right"></i> Quem somos</a></li>
+          <li><a href="#"><i class="fas fa-chevron-right"></i> Serviços</a></li>
+          <li><a href="#"><i class="fas fa-chevron-right"></i> Contato</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Serviços</h4>
+        <ul>
+          <li><a href="#"><i class="fas fa-chevron-right"></i> Tecnologia</a></li>
+          <li><a href="#"><i class="fas fa-chevron-right"></i> Administração</a></li>
+          <li><a href="#"><i class="fas fa-chevron-right"></i> Design</a></li>
+          <li><a href="#"><i class="fas fa-chevron-right"></i> Engenharia de produção</a></li>
+          <li><a href="#"><i class="fas fa-chevron-right"></i> Engenharia Química/Alimentos</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Contatos</h4>
+        <ul class="contact-info">
+          <li><i class="fas fa-phone"></i>+55 11 94819-9383</li>
+          <li><i class="fas fa-envelope"></i> contato@mauajr.com</li>
+          <li><i class="fas fa-map-marker-alt"></i> Praça Mauá, 1 - Mauá, São Caetano do Sul - SP, 09580-900</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>Mauá Jr | Todos os direitos reservados.</p>
+      <p>CNPJ: 62.571.401/0001-59</p>
+      <p>Desenvolvido por Mauá Júnior</p>
+    </div>
+
+    <!-- COMENTÁRIO: Botão flutuante do WhatsApp -->
+    <a href="https://api.whatsapp.com/send?phone=5511948199383&text=Ol%C3%A1!%20Estou%20entrando%20em%20contato%20diretamente%20pelo%20link%20do%20site%20e%20gostaria%20de%20solu%C3%A7%C3%B5es%20na%20%C3%A1rea%20de%20[especifique%20a%20%C3%A1rea%20de%20interesse]."
+      target="_blank" rel="noopener noreferrer" class="whatsapp-button">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+  </footer>
+
+  <!-- COMENTÁRIO: Link para arquivo JavaScript específico desta página -->
+  <script src="ScriptFaq.js"></script>
+</body>
+
+</html>
