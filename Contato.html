@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+        Mauá Júnior - Somos uma empresa júnior de consultoria de Engenharia,
+        Administração e Tecnologia formada apenas por estudantes do Instituto Mauá
+        de Tecnologia.
+    </title>
+    <link rel="stylesheet" href="contato.css" />
+    <link rel="icon" type="image/png" href="./Images/Logo Vertical.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="PáginaInicial.html">
+                <img src="./images/Logo Horizontal com Slogam.png" alt="Logo Mauá Júnior" class="logo">
+            </a>
+
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#" >Home</a></li>
+                <li><a href="Quem-somos.html">Quem Somos</a></li>
+                <li class="dropdown">
+                    <a href="#">Serviços <i class="fas fa-angle-down"></i></a>
+                    <ul class="dropdown-content">
+                        <li><a href="Serviços-Tecnologia.html"><i class="fas fa-angle-right"></i> Tecnologia</a></li>
+                        <li><a href="Serviços-administraçao.html"><i class="fas fa-angle-right"></i> Administração</a>
+                        </li>
+                        <li><a href="servicos-design.html"><i class="fas fa-angle-right"></i> Design</a></li>
+                        <li><a href="servicos-producao.html"><i class="fas fa-angle-right"></i> Engenharia de
+                                Produção</a></li>
+                        <li><a href="Serviços-Quimica.html"><i class="fas fa-angle-right"></i> Engenharia
+                                Química/Alimentos</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="Contato.html" class="active">Contato</a></li>
+            </ul>
+
+            <a href="Contato.html" class="cta-button">Entre em contato conosco</a>
+        </div>
+    </nav>
+    <header class="header">
+        <h1>Contato</h1>
+    </header>
+    <article>
+        <main>
+            <section id="formulario">
+                <h3 class="azul">CONTATO</h3>
+                <h2 class="principais">Entre em contato com a gente</h2>
+                <form class="ajuste" action="enviar.php" method="post">
+                    <div class="fileira">
+                        <input class="half" type="text" name="nome" placeholder="Nome" required />
+                        <input class="half" type="tel" name="telefone" placeholder="Tel. (XX) XXXXX-XXXX" required />
+                    </div>
+
+                    <input class="full" type="email" name="email" placeholder="E-mail" required />
+                    <input class="full" type="text" name="empresa" placeholder="Nome da empresa" />
+
+                    <select class="full2" name="funcionarios" required>
+                        <option value="">Números de funcionários:</option>
+                        <option value="1-10">1-10</option>
+                        <option value="11-50">11-50</option>
+                        <option value="51-100">51-100</option>
+                        <option value="100+">100+</option>
+                    </select>
+
+                    <select class="full2" name="cargo" required>
+                        <option value="">Qual o seu cargo na empresa?</option>
+                        <option value="dono/socio">Dono/sócio</option>
+                        <option value="diretor">Diretor</option>
+                        <option value="gerente">Gerente</option>
+                        <option value="analista/assistente/auxiliar">
+                            Analista/Assistente/Auxiliar
+                        </option>
+                        <option value="pessoafisica">
+                            Não tenho empresa, sou pessoa física
+                        </option>
+                    </select>
+
+                    <div class="caixadetextoebotão">
+                        <textarea class="full2" name="mensagem"
+                            placeholder="Nos conte um pouco sobre sua situação, o que você precisa?"
+                            required></textarea>
+                            <br>
+                        <button id="botao" type="submit">ENVIAR MENSAGEM</button>
+                    </div>
+                </form>
+            </section>
+        </main>
+    </article>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <img src="./images/Logo Horizontal Branco com Slogam.png" alt="Logo Mauá Júnior" class="footer-logo">
+                <p class="footer-description">
+                    A Mauá Júnior é uma entidade sem fins lucrativos, voltada para o desenvolvimento profissional de
+                    alunos do
+                    Instituto Mauá de Tecnologia através da realização de projetos personalizados para clientes.
+                </p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/mauajr/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://api.whatsapp.com/send?phone=5511976257520&text=Ol%C3%A1!%20Estou%20entrando%20em%20contato%20diretamente%20pelo%20link%20do%20site%20e%20gostaria%20de%20solu%C3%A7%C3%B5es%20na%20%C3%A1rea%20de%20[especifique%20a%20%C3%A1rea%20de%20interesse]."
+                        target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.linkedin.com/company/mauajr/" target="_blank"><i
+                            class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h4>Páginas</h4>
+                <ul>
+                    <li><a href="PáginaInicial.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                    <li><a href="Quem-somos.html"><i class="fas fa-chevron-right"></i> Quem somos</a></li>
+                    <li><a href="Serviços-Tecnologia.html"><i class="fas fa-chevron-right"></i> Serviços</a></li>
+                    <li><a href="Contato.html"><i class="fas fa-chevron-right"></i> Contato</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Serviços</h4>
+                <ul>
+                    <li><a href="Serviços-Tecnologia.html"><i class="fas fa-chevron-right"></i> Tecnologia</a></li>
+                    <li><a href="Servicos-Administracao.html"><i class="fas fa-chevron-right"></i> Administração</a>
+                    </li>
+                    <li><a href="servicos-design.html"><i class="fas fa-chevron-right"></i> Design</a></li>
+                    <li><a href="servicos-producao.html"><i class="fas fa-chevron-right"></i> Engenharia de produção</a>
+                    </li>
+                    <li><a href="Serviços-Quimica.html"><i class="fas fa-chevron-right"></i> Engenharia
+                            Química/Alimentos</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Contatos</h4>
+                <ul class="contact-info">
+                    <li><i class="fas fa-phone"></i>+55 11 97625-7520</li>
+                    <li><i class="fas fa-envelope"></i> contato@mauajr.com</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Praça Mauá, 1 - Mauá, São Caetano do Sul - SP, 09580-900
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>Mauá Jr | Todos os direitos reservados.</p>
+            <p>CNPJ: 62.571.401/0001-59</p>
+            <p>Desenvolvido por Mauá Júnior</p>
+        </div>
+
+        <a href="https://api.whatsapp.com/send?phone=5511976257520&text=Ol%C3%A1!%20Estou%20entrando%20em%20contato%20diretamente%20pelo%20link%20do%20site%20e%20gostaria%20de%20solu%C3%A7%C3%B5es%20na%20%C3%A1rea%20de%20[especifique%20a%20%C3%A1rea%20de%20interesse]."
+            target="_blank" rel="noopener noreferrer" class="whatsapp-button">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </footer>
+</body>
+
+</html>
