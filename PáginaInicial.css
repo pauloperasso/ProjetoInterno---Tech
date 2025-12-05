@@ -463,37 +463,66 @@ body {
   margin-bottom: 40px;
 }
 
-.carousel-container {
-  position: relative;
-  overflow: hidden;
-  max-width: 1200px;
+.case-slider {
+  max-width: 900px;
   margin: 0 auto;
-  padding: 0 20px;
-}
-
-.carousel-track {
   display: flex;
-  transition: transform 0.5s ease-in-out;
-  padding-bottom: 20px;
-  /* Espaço para os dots */
+  align-items: center;
+  position: relative;
+  gap: 20px;
 }
 
-.carousel-card {
-  flex: 0 0 calc(33.3333% - 20px);
+.case-btn {
+  background: #0e1d60;
+  border: none;
+  color: white;
+  font-size: 22px;
+  padding: 10px 14px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.case-btn:hover {
+  background: #003fcc;
+}
+
+.case-content {
+  flex: 1;
+  position: relative;
+  min-height: 330px;
+}
+
+.case-card {
+  display: none;
   background: white;
-  border-radius: 8px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
-  margin: 0 10px;
   padding: 30px;
-  box-sizing: border-box;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  min-height: 250px;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  animation: fadeIn .4s ease forwards;
 }
 
-.carousel-card:hover {
-  transform: translateY(-10px) scale(1.03);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+.case-card.active {
+  display: block;
 }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* mobile */
 
 .card-text {
   text-align: left;
@@ -751,6 +780,128 @@ body {
 }
 
 /* =========================================
+   🖥️ PC / DESKTOP (a partir de 992px)
+========================================= */
+@media (min-width: 992px) {
+
+  .navbar-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.8rem;
+  }
+
+  .servicos-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .vantagens-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .servicos-cta-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 60px;
+  }
+
+  .footer-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+  }
+
+  .case-slider {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .case-content {
+    min-height: 350px;
+  }
+}
+
+/* =========================================
+   💻 TABLET / NOTEBOOK (778px a 991px)
+========================================= */
+@media (min-width: 778px) and (max-width: 991px) {
+
+  .navbar-container {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 30px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .servicos-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    padding: 0 40px;
+  }
+
+  .servicos-cta-container {
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+    padding: 0 30px;
+  }
+
+  .servicos-cta-imagem img {
+    width: 80%;
+  }
+
+  .vantagens-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  .passos-contato {
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .footer-container {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .footer-column {
+    flex: 1 1 45%;
+    text-align: center;
+  }
+
+  .case-slider {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .case-content {
+    min-height: 420px;
+  }
+
+  .case-card {
+    padding: 25px;
+  }
+}
+
+/* =========================================
    📱 CELULAR (até 777px)
 ========================================= */
 @media (max-width: 777px) {
@@ -800,17 +951,6 @@ body {
     gap: 0;
   }
 
-  .nav-links {
-    flex-direction: column;
-    text-align: center;
-    gap: 10px;
-  }
-
-  .cta-button {
-    width: 90%;
-    text-align: center;
-  }
-
   .hero-content h1 {
     font-size: 1.8rem;
     text-align: center;
@@ -845,11 +985,6 @@ body {
     justify-content: center;
   }
 
-  .carousel-card {
-    width: 90%;
-    margin: 0 auto;
-  }
-
   .passos-contato {
     flex-direction: column;
     align-items: center;
@@ -875,124 +1010,52 @@ body {
     bottom: 20px;
     right: 20px;
   }
-}
 
-/* =========================================
-   💻 TABLET / NOTEBOOK (778px a 991px)
-========================================= */
-@media (min-width: 778px) and (max-width: 991px) {
-  .navbar-container {
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 0 30px;
+  .case-slider {
+    flex-direction: column;
+    gap: 0;
+    position: relative;
+    padding-bottom: 80px;
   }
 
-  .nav-links {
-    flex-wrap: wrap;
-    gap: 15px;
-  }
-
-  .hero-content h1 {
-    font-size: 2.2rem;
-  }
-
-  .servicos-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
-    padding: 0 40px;
-  }
-
-  .servicos-cta-container {
-    flex-direction: row;
+  .case-btn {
+    position: absolute;
+    bottom: -60px;
+    z-index: 10;
+    margin: 0;
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+    display: flex;
     align-items: center;
-    gap: 30px;
-    padding: 0 30px;
-  }
-
-  .servicos-cta-imagem img {
-    width: 80%;
-  }
-
-  .vantagens-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
-  }
-
-  .carousel-card {
-    width: 70%;
-  }
-
-  .passos-contato {
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;
-  }
-
-  .footer-container {
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
-
-  .footer-column {
-    flex: 1 1 45%;
-    text-align: center;
-  }
-}
-
-/* =========================================
-   🖥️ PC / DESKTOP (a partir de 992px)
-========================================= */
-@media (min-width: 992px) {
-  .navbar-container {
-    max-width: 1300px;
-    margin: 0 auto;
-    padding: 0 40px;
-  }
-
-  .hero-content h1 {
-    font-size: 2.8rem;
-  }
-
-  .servicos-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-  }
-
-  .vantagens-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-  }
-
-  .servicos-cta-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 60px;
-  }
-
-  .footer-container {
-    max-width: 1300px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    gap: 40px;
-  }
-}
-
-@media (max-width: 777px) {
-  .carousel-inner {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 15px;
-    padding: 10px;
-  }
-
-  .carousel-item {
-    display: flex;
     justify-content: center;
+    padding: 0;
   }
 
-  .carousel-card {
-    width: 95%;
+  .case-btn.prev {
+    left: 20px;
+  }
+
+  .case-btn.next {
+    right: 20px;
+  }
+
+  .case-content {
+    width: 100%;
+    min-height: 450px;
+  }
+
+  .case-card {
+    padding: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  .card-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
   }
 }

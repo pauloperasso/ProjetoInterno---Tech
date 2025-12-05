@@ -455,19 +455,16 @@ button:hover {
     margin-left: 0;
   }
 
-  /* Some menu e CTA por padrão */
   .navbar-container .nav-links,
   .navbar-container .cta-button {
     display: none;
   }
 
-  /* Mostra quando receber .active via JS */
   .nav-links.active,
   .cta-button.active {
     display: flex;
   }
 
-  /* Quebra a navbar em linhas */
   .navbar-container {
     flex-direction: row;
     align-items: center;
@@ -476,7 +473,6 @@ button:hover {
     width: 100%;
   }
 
-  /* Links agora ficam em coluna */
   .nav-links {
     flex-direction: column;
     width: 100%;
@@ -495,7 +491,6 @@ button:hover {
     padding: 10px 0;
   }
 
-  /* Dropdown NÃO exibe no hover no mobile */
   .dropdown-content {
     position: relative;
     width: 100%;
@@ -507,7 +502,6 @@ button:hover {
     padding-left: 15px;
   }
 
-  /* Só abre quando .dropdown.active */
   .dropdown.active .dropdown-content {
     display: block;
   }
@@ -516,7 +510,6 @@ button:hover {
     display: none;
   }
 
-  /* CTA dentro do menu */
   .navbar-container .cta-button {
     width: 90%;
     text-align: center;
@@ -524,13 +517,11 @@ button:hover {
     margin: 10px auto;
   }
 
-  /* Ajustes do header */
   .header {
     padding: 100px 20px;
     font-size: 20px;
   }
 
-  /* Formulário */
   #formulario {
     margin: 40px 20px;
   }

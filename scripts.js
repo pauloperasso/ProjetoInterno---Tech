@@ -37,3 +37,26 @@ faqQuestions.forEach(question => {
         faqItem.classList.toggle('active');
     });
 });
+
+const caseCards = document.querySelectorAll(".case-card");
+const prevBtn = document.querySelector(".case-btn.prev");
+const nextBtn = document.querySelector(".case-btn.next");
+
+let caseIndex = 0;
+
+function showCase(i) {
+  caseCards.forEach(c => c.classList.remove("active"));
+  caseCards[i].classList.add("active");
+}
+
+prevBtn.addEventListener("click", () => {
+  caseIndex = (caseIndex - 1 + caseCards.length) % caseCards.length;
+  showCase(caseIndex);
+});
+
+nextBtn.addEventListener("click", () => {
+  caseIndex = (caseIndex + 1) % caseCards.length;
+  showCase(caseIndex);
+});
+
+showCase(caseIndex);
